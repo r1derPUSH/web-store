@@ -1,0 +1,144 @@
+/* body styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* теплий помаранчево-жовтий градієнт */
+  color: #fff; /* білий текст для контрасту */
+  min-height: 100vh;
+  box-sizing: border-box;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* header section*/
+
+.storeText {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 15vh;
+    color: hsl(205, 49%, 38%);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(270deg, 
+        hsl(26, 100%, 68%), 
+        hsl(35, 100%, 70%), 
+        hsl(26, 100%, 68%)
+    ); 
+    background-size: 800% 800%;
+    animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.storeCart {
+    margin-top: 5vh;
+    margin-right: 15vh;
+}
+
+.storeCart img {
+    width: 8vh;
+    height: 8vh;
+}
+
+/* main section */
+
+.products-container {
+    display: flex;
+    margin: 50px;
+}
+
+/* animated "select-menu" styles */
+
+.box {
+    width: 30vh;
+    height: 20vh;
+    margin: 20px;
+}
+
+.selected-text {
+    margin-top: -1vh;
+}
+
+.selected_option {
+    height: 2.5vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    padding: 1.5vh;
+    border-radius: 2vh;
+    cursor: pointer;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    right: 1.7vh;
+    top: 1.2vh;
+    width: 1.5vh;
+    height: 1.5vh;
+    border-top: 0.5vh solid;
+    border-left: 0.5vh solid;
+    rotate: -135deg;
+    transition: 0.4s;
+}
+
+.arrow_active {
+    top: 2.5vh;
+    rotate: 45deg;
+}
+
+.option_box {
+    position: relative;
+    margin-top: 15px;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav_active {
+    height: 27vh;
+}
+
+nav ul li {
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: #000;
+    list-style: none;
+    padding: 1vh 1.5vh;
+    cursor: pointer;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+nav ul li:hover {
+    background-color: hsl(0, 0%, 31%);
+}
+
+nav::-webkit-scrollbar {
+    width: 1.2vh;
+}
+nav::-webkit-scrollbar-thumb {
+    background-color: #5e35b1;
+    border-radius: 10px;
+}
