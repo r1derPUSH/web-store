@@ -1,18 +1,40 @@
 // DOM Manipulation
 const productContainer = document.querySelector('.product-box');
+const navig = document.querySelector('.nav');
+let selected_option = document.querySelector('.selected_option');
+let selection = document.querySelector(".selected_option p");
+let option_box = document.querySelector('nav');
+let options = document.querySelectorAll("nav ul li");
+let arrow = document.querySelector('.arrow');
+let selected_text = document.querySelector('.selected-text');
 
 // Endpoint Of DOM Manipulation
+
+function wait (ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+navig.addEventListener('click', async function (e) {
+    await wait(1000);
+    if (selected_text.textContent == "men's clothing") {
+        alert("men's clothing");
+    }
+    if (selected_text.textContent == "jewelery") {
+        alert("jewelery");
+    }
+    if (selected_text.textContent == "electronics") {
+        alert("electronics");
+    }
+    if (selected_text.textContent == "women's clothing") {
+        alert("women's clothing");
+    }
+})
 
 async function renderWebsite() {
 
 
 // select-menu code
-
-    let selected_option = document.querySelector('.selected_option');
-    let selection = document.querySelector(".selected_option p");
-    let option_box = document.querySelector('nav');
-    let options = document.querySelectorAll("nav ul li");
-    let arrow = document.querySelector('.arrow');
 
     selected_option.addEventListener("click", selection_function)
 
@@ -67,64 +89,14 @@ class Product {
     }
 }
 
-class ProductStyles { 
-    constructor (width, height) {
-        this.width = width;
-        this.height = height;
+class MenClothing {
+    constructor (data) {
+
     }
-    getWidth () {
-        return this.width;
-    }
-    getHeight () {
-        return this.height;
+    renderMenClothing () {
+        
     }
 }
-
-const proportions = new ProductStyles(30, 30);
-// properties (width, heigh)
-const widthOfContainer = proportions.getWidth();
-const heightOfContainer = proportions.getHeight();
-
-class DivProperties {
-    constructor (product) {
-        this.product = product;
-    }
-    createDiv () {
-        this.product.style.width = `${widthOfContainer}vh`;
-        this.product.style.height = `${heightOfContainer}vh`;
-        this.product.style.border = `3px solid black`;
-        this.product.style.backgroundColor = 'gray';
-    }
-}
-
-// properties for creating div
-const divProperties = new DivProperties(productContainer);
-
-
-
-class CreateImg {
-    constructor (src) {
-        this.src = src;
-    }
-    createImage() {
-        const img = document.createElement('img');
-        productContainer.appendChild(img);
-        img.src = `${this.src}`;
-        img.style.width = '10vh';
-        img.style.height = '10vh';
-    }
-}
-const imgProperties = new CreateImg(data[0].image);
-
-class RenderProduct {
-    renderAll () {
-        divProperties.createDiv();
-        imgProperties.createImage();
-    }
-}
-
-const renderProduct = new RenderProduct();
-renderProduct.renderAll();
 
 }
 
