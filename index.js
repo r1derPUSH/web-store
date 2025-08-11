@@ -1,12 +1,17 @@
 // DOM Manipulation
 const productContainer = document.querySelector('.product-box');
 const navig = document.querySelector('.nav');
-let selected_option = document.querySelector('.selected_option');
-let selection = document.querySelector(".selected_option p");
-let option_box = document.querySelector('nav');
-let options = document.querySelectorAll("nav ul li");
-let arrow = document.querySelector('.arrow');
-let selected_text = document.querySelector('.selected-text');
+const selected_option = document.querySelector('.selected_option');
+const selection = document.querySelector(".selected_option p");
+const option_box = document.querySelector('nav');
+const options = document.querySelectorAll("nav ul li");
+const arrow = document.querySelector('.arrow');
+const selected_text = document.querySelector('.selected-text');
+// products
+const menC = document.querySelector('.menC');
+const womenC = document.querySelector('.womenC');
+const electronics = document.querySelector('.electronics');
+const jewelery = document.querySelector('.jewelery');
 
 // Endpoint Of DOM Manipulation
 
@@ -77,24 +82,54 @@ const response = await fetch('https://fakestoreapi.com/products');
 const data = await response.json();
 console.log(data);
 
+const arrOfMenClothing = data.filter(item => item.category == "men's clothing");
+const arrOfWomenClothing = data.filter(item => item.category == "women's clothing");
+const arrOfElectronics = data.filter(item => item.category == "electronics");
+const arrOfJewelery = data.filter(item => item.category == "jewelery");
+// console.log(arrOfMenClothing);
+// console.log(arrOfWomenClothing);
+// console.log(arrOfElectronics);
+// console.log(arrOfJewelery);
+
 // Products
 
-class Product {
-    constructor (id, name, price, description, category) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.category = category;
+class ProductProperties {
+    constructor (width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    getWidth () {
+        return this.width;
+    }
+    getHeight () {
+        return this.height;
     }
 }
 
 class MenClothing {
     constructor (data) {
-
+        
     }
     renderMenClothing () {
         
+    }
+}
+
+class WomenClothing {
+    constructor (data) {
+
+    }
+    renderWomenClothing () {
+
+    }
+}
+
+class Jewelery {
+    constructor (data) {
+
+    }
+    renderJewelery () {
+
     }
 }
 
