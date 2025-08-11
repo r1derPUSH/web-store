@@ -20,22 +20,6 @@ function wait (ms) {
 }
 
 
-navig.addEventListener('click', async function (e) {
-    await wait(1000);
-    if (selected_text.textContent == "men's clothing") {
-        alert("men's clothing");
-    }
-    if (selected_text.textContent == "jewelery") {
-        alert("jewelery");
-    }
-    if (selected_text.textContent == "electronics") {
-        alert("electronics");
-    }
-    if (selected_text.textContent == "women's clothing") {
-        alert("women's clothing");
-    }
-})
-
 async function renderWebsite() {
 
 
@@ -109,21 +93,28 @@ class MenClothing {
             const description = document.createElement('p');
             const priceOfProduct = document.createElement('p');
             menC.appendChild(product);
-            product.style.width = '50vh';
+            menC.style.display = 'flex';
+            product.classList.add('product-container'); // for hover
+            product.style.background = "rgba(255, 255, 255, 0.15)";
+            product.style.borderRadius = '12px';
+            product.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.25)";
+            product.style.backdropFilter = "blur(8px)";
+            product.style.transform = "transform 0.3s ease, box-shadow 0.3s ease";
+            product.style.width = '45vh';
             product.style.height = '50vh';
-            product.style.border = '2px solid gray';
             product.style.display = 'flex';
             product.style.flexDirection = 'column';
             product.style.justifyContent = 'space-around';
             product.style.alignItems = 'center';
+            product.style.textAlign = 'center';
             // title 
             product.appendChild(title);
             title.textContent = arrOfMenClothing[i].title;
             // img
             product.appendChild(img);
             img.src = arrOfMenClothing[i].image;
-            img.style.width = '3vh';
-            img.style.height = '3vh';
+            img.style.width = '10vh';
+            img.style.height = '10vh';
             //desc
             product.appendChild(description);
             description.textContent = arrOfMenClothing[i].description;
@@ -135,7 +126,6 @@ class MenClothing {
 }
 
 const menClothing = new MenClothing ();
-menClothing.renderMenClothing();
 
 class WomenClothing {
     constructor (data) {
@@ -154,6 +144,23 @@ class Jewelery {
 
     }
 }
+
+navig.addEventListener('click', async function (e) {
+    await wait(1000);
+    if (selected_text.textContent == "men's clothing") {
+        console.log("men's clothing");
+        menClothing.renderMenClothing();
+    }
+    if (selected_text.textContent == "jewelery") {
+        console.log("jewelery");
+    }
+    if (selected_text.textContent == "electronics") {
+        console.log("electronics");
+    }
+    if (selected_text.textContent == "women's clothing") {
+        console.log("women's clothing");
+    }
+})
 
 }
 
