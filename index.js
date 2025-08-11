@@ -69,10 +69,12 @@ console.log(data);
 let isManActive = false;
 let isWomenActive = false;
 let isElectronicsActive = false;
-let iseJeweleryActive = false;
+let isJeweleryActive = false;
 
 let isManCreated = false;
 let isWomenCreated = false;
+let isElectronicCreated = false;
+let isJeweleryCreated = false;
 
 const arrOfMenClothing = data.filter(item => item.category == "men's clothing");
 const arrOfWomenClothing = data.filter(item => item.category == "women's clothing");
@@ -96,7 +98,11 @@ class MenClothing {
     renderMenClothing () {
         isManActive = true;
         womenC.style.display = 'none';
+        electronics.style.display = 'none';
+        jewelery.style.display = 'none';
         isWomenActive = false;
+        isElectronicsActive = false;
+        isJeweleryActive = false;
         if (isManCreated) {
             menC.style.display = 'flex';
             return;
@@ -160,7 +166,11 @@ class WomenClothing {
     renderWomenClothing () {
         isWomenActive = true;
         menC.style.display = 'none';
+        electronics.style.display = 'none';
+        jewelery.style.display = 'none';
         isManActive = false;
+        isElectronicsActive = false;
+        isJeweleryActive = false;
         if (isWomenCreated) {
             womenC.style.display = 'flex';
             return;
@@ -216,14 +226,141 @@ class WomenClothing {
 
 const womenClothing = new WomenClothing();
 
+class Electronics {
+    constructor (data) {
+
+    }
+
+    renderElectronics () {
+        isElectronicsActive = true;
+        menC.style.display = 'none';
+        womenC.style.display = 'none';
+        jewelery.style.display = 'none';
+        isManActive = false;
+        isWomenActive = false;
+        isJeweleryActive = false;
+        if (isElectronicCreated) {
+            electronics.style.display = 'flex';
+            return;
+        }
+        for (let i = 0; i < 4; i++) {
+            const product = document.createElement('div');
+            const img = document.createElement('img');
+            const title = document.createElement('h1');
+            const description = document.createElement('p');
+            const priceOfProduct = document.createElement('p');
+            const button = document.createElement('button');
+            electronics.appendChild(product);
+            electronics.style.display = 'flex';
+            product.classList.add('product-container'); // for hover
+            product.style.background = "rgba(255, 255, 255, 0.15)";
+            product.style.borderRadius = '12px';
+            product.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.25)";
+            product.style.backdropFilter = "blur(8px)";
+            product.style.transform = "transform 0.3s ease, box-shadow 0.3s ease";
+            product.style.width = '45vh';
+            product.style.height = '50vh';
+            product.style.display = 'flex';
+            product.style.flexDirection = 'column';
+            product.style.justifyContent = 'space-around';
+            product.style.alignItems = 'center';
+            product.style.textAlign = 'center';
+            // title 
+            product.appendChild(title);
+            title.textContent = arrOfElectronics[i].title;
+            // img
+            product.appendChild(img);
+            img.src = arrOfElectronics[i].image;
+            img.style.width = '10vh';
+            img.style.height = '10vh';
+            //desc
+            product.appendChild(description);
+            description.textContent = arrOfElectronics[i].description;
+            description.style.fontSize = '1.2rem';
+            // price
+            product.appendChild(priceOfProduct);
+            priceOfProduct.textContent = arrOfElectronics[i].price + "$";
+            priceOfProduct.style.fontSize = '1.5rem';
+            priceOfProduct.style.fontWeight = 'bold';
+            // btn
+            product.appendChild(button);
+            button.classList.add('add-to-cart-btn');
+            button.textContent = 'Add to Cart';
+            button.style.marginBottom = '2vh';
+            isElectronicCreated = true;
+    }
+}
+}
+
+const elec = new Electronics ();
+
+
 class Jewelery {
     constructor (data) {
 
     }
     renderJewelery () {
-
+        isJeweleryActive = true;
+        menC.style.display = 'none';
+        womenC.style.display = 'none';
+        electronics.style.display = 'none';
+        isManActive = false;
+        isWomenActive = false;
+        isElectronicsActive = false;
+        if (isJeweleryCreated) {
+            jewelery.style.display = 'flex';
+            return;
+        }
+        for (let i = 0; i < 4; i++) {
+            const product = document.createElement('div');
+            const img = document.createElement('img');
+            const title = document.createElement('h1');
+            const description = document.createElement('p');
+            const priceOfProduct = document.createElement('p');
+            const button = document.createElement('button');
+            jewelery.appendChild(product);
+            jewelery.style.display = 'flex';
+            product.classList.add('product-container'); // for hover
+            product.style.background = "rgba(255, 255, 255, 0.15)";
+            product.style.borderRadius = '12px';
+            product.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.25)";
+            product.style.backdropFilter = "blur(8px)";
+            product.style.transform = "transform 0.3s ease, box-shadow 0.3s ease";
+            product.style.width = '45vh';
+            product.style.height = '50vh';
+            product.style.display = 'flex';
+            product.style.flexDirection = 'column';
+            product.style.justifyContent = 'space-around';
+            product.style.alignItems = 'center';
+            product.style.textAlign = 'center';
+            // title 
+            product.appendChild(title);
+            title.textContent = arrOfJewelery[i].title;
+            // img
+            product.appendChild(img);
+            img.src = arrOfJewelery[i].image;
+            img.style.width = '10vh';
+            img.style.height = '10vh';
+            //desc
+            product.appendChild(description);
+            description.textContent = arrOfJewelery[i].description;
+            description.style.fontSize = '1.2rem';
+            // price
+            product.appendChild(priceOfProduct);
+            priceOfProduct.textContent = arrOfJewelery[i].price + "$";
+            priceOfProduct.style.fontSize = '1.5rem';
+            priceOfProduct.style.fontWeight = 'bold';
+            // btn
+            product.appendChild(button);
+            button.classList.add('add-to-cart-btn');
+            button.textContent = 'Add to Cart';
+            button.style.marginBottom = '2vh';
+            isJeweleryCreated = true;
+    }
     }
 }
+
+const jew = new Jewelery ();
 
 navig.addEventListener('click', async function (e) {
     await wait(1000);
@@ -231,15 +368,17 @@ navig.addEventListener('click', async function (e) {
         console.log("men's clothing");
         menClothing.renderMenClothing();
     }
-    if (selected_text.textContent == "jewelery" && !isWomenActive) {
+    if (selected_text.textContent == "women's clothing" && !isWomenActive) {
         console.log("jewelery");
         womenClothing.renderWomenClothing();
     }
-    if (selected_text.textContent == "electronics") {
+    if (selected_text.textContent == "electronics" && !isElectronicsActive) {
         console.log("electronics");
+        elec.renderElectronics();
     }
-    if (selected_text.textContent == "women's clothing") {
+    if (selected_text.textContent == "jewelery") {
         console.log("women's clothing");
+        jew.renderJewelery();
     }
 })
 

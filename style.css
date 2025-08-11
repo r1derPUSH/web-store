@@ -144,7 +144,9 @@ nav::-webkit-scrollbar-thumb {
 }
 
 .menC,
-.womenC {
+.womenC,
+.electronics,
+.jewelery {
     display: none;
     justify-content: space-between;
     align-items: center;
