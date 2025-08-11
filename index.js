@@ -93,27 +93,49 @@ const arrOfJewelery = data.filter(item => item.category == "jewelery");
 
 // Products
 
-class ProductProperties {
-    constructor (width, height) {
-        this.width = width;
-        this.height = height;
+class MenClothing {
+    constructor (name, img, desc, price, inStock) {
+        this.name = name;
+        this.img = img;
+        this.desc = desc;
+        this.price = price;
+        this.inStock = inStock;
     }
-    getWidth () {
-        return this.width;
-    }
-    getHeight () {
-        return this.height;
+    renderMenClothing () {
+        for (let i = 0; i < arrOfMenClothing.length; i++) {
+            const product = document.createElement('div');
+            const img = document.createElement('img');
+            const title = document.createElement('h1');
+            const description = document.createElement('p');
+            const priceOfProduct = document.createElement('p');
+            menC.appendChild(product);
+            product.style.width = '50vh';
+            product.style.height = '50vh';
+            product.style.border = '2px solid gray';
+            product.style.display = 'flex';
+            product.style.flexDirection = 'column';
+            product.style.justifyContent = 'space-around';
+            product.style.alignItems = 'center';
+            // title 
+            product.appendChild(title);
+            title.textContent = arrOfMenClothing[i].title;
+            // img
+            product.appendChild(img);
+            img.src = arrOfMenClothing[i].image;
+            img.style.width = '3vh';
+            img.style.height = '3vh';
+            //desc
+            product.appendChild(description);
+            description.textContent = arrOfMenClothing[i].description;
+            // price
+            product.appendChild(priceOfProduct);
+            priceOfProduct.textContent = arrOfMenClothing[i].price;
+        }
     }
 }
 
-class MenClothing {
-    constructor (data) {
-        
-    }
-    renderMenClothing () {
-        
-    }
-}
+const menClothing = new MenClothing ();
+menClothing.renderMenClothing();
 
 class WomenClothing {
     constructor (data) {

@@ -56,7 +56,7 @@ body {
 
 .products-container {
     display: flex;
-    margin: 50px;
+    margin: 3vh;
 }
 
 /* animated "select-menu" styles */
@@ -141,4 +141,11 @@ nav::-webkit-scrollbar {
 nav::-webkit-scrollbar-thumb {
     background-color: #5e35b1;
     border-radius: 10px;
+}
+
+.menC {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
