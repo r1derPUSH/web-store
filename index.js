@@ -66,6 +66,11 @@ const response = await fetch('https://fakestoreapi.com/products');
 const data = await response.json();
 console.log(data);
 
+let isManActive = false;
+let isWomenActive = false;
+let isElectronicsActive = false;
+let iseJeweleryActive = false;
+
 const arrOfMenClothing = data.filter(item => item.category == "men's clothing");
 const arrOfWomenClothing = data.filter(item => item.category == "women's clothing");
 const arrOfElectronics = data.filter(item => item.category == "electronics");
@@ -86,12 +91,14 @@ class MenClothing {
         this.inStock = inStock;
     }
     renderMenClothing () {
+        isManActive = true;
         for (let i = 0; i < arrOfMenClothing.length; i++) {
             const product = document.createElement('div');
             const img = document.createElement('img');
             const title = document.createElement('h1');
             const description = document.createElement('p');
             const priceOfProduct = document.createElement('p');
+            const button = document.createElement('button');
             menC.appendChild(product);
             menC.style.display = 'flex';
             product.classList.add('product-container'); // for hover
@@ -118,9 +125,17 @@ class MenClothing {
             //desc
             product.appendChild(description);
             description.textContent = arrOfMenClothing[i].description;
+            description.style.fontSize = '1.1rem';
             // price
             product.appendChild(priceOfProduct);
-            priceOfProduct.textContent = arrOfMenClothing[i].price;
+            priceOfProduct.textContent = arrOfMenClothing[i].price + "$";
+            priceOfProduct.style.fontSize = '1.5rem';
+            priceOfProduct.style.fontWeight = 'bold';
+            // btn
+            product.appendChild(button);
+            button.classList.add('add-to-cart-btn');
+            button.textContent = 'Add to Cart';
+            button.style.marginBottom = '2vh';
         }
     }
 }
@@ -147,7 +162,7 @@ class Jewelery {
 
 navig.addEventListener('click', async function (e) {
     await wait(1000);
-    if (selected_text.textContent == "men's clothing") {
+    if (selected_text.textContent == "men's clothing" && !isManActive) {
         console.log("men's clothing");
         menClothing.renderMenClothing();
     }

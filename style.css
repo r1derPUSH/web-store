@@ -158,3 +158,37 @@ nav::-webkit-scrollbar-thumb {
     transform: scale(1.02);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
+
+p {
+      display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.add-to-cart-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, hsl(26, 100%, 68%), hsl(35, 100%, 70%));
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 126, 95, 0.6);
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(90deg, hsl(35, 100%, 70%), hsl(26, 100%, 68%));
+  box-shadow: 0 10px 25px rgba(255, 126, 95, 0.8);
+  transform: scale(1.05);
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 10px rgba(255, 126, 95, 0.5);
+}
