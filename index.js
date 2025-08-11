@@ -71,6 +71,9 @@ let isWomenActive = false;
 let isElectronicsActive = false;
 let iseJeweleryActive = false;
 
+let isManCreated = false;
+let isWomenCreated = false;
+
 const arrOfMenClothing = data.filter(item => item.category == "men's clothing");
 const arrOfWomenClothing = data.filter(item => item.category == "women's clothing");
 const arrOfElectronics = data.filter(item => item.category == "electronics");
@@ -92,6 +95,12 @@ class MenClothing {
     }
     renderMenClothing () {
         isManActive = true;
+        womenC.style.display = 'none';
+        isWomenActive = false;
+        if (isManCreated) {
+            menC.style.display = 'flex';
+            return;
+        }
         for (let i = 0; i < arrOfMenClothing.length; i++) {
             const product = document.createElement('div');
             const img = document.createElement('img');
@@ -125,7 +134,7 @@ class MenClothing {
             //desc
             product.appendChild(description);
             description.textContent = arrOfMenClothing[i].description;
-            description.style.fontSize = '1.1rem';
+            description.style.fontSize = '1.2rem';
             // price
             product.appendChild(priceOfProduct);
             priceOfProduct.textContent = arrOfMenClothing[i].price + "$";
@@ -136,6 +145,8 @@ class MenClothing {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            // checking
+            isManCreated = true;
         }
     }
 }
@@ -147,9 +158,63 @@ class WomenClothing {
 
     }
     renderWomenClothing () {
-
+        isWomenActive = true;
+        menC.style.display = 'none';
+        isManActive = false;
+        if (isWomenCreated) {
+            womenC.style.display = 'flex';
+            return;
+        }
+        for (let i = 0; i < 4; i++) {
+            const product = document.createElement('div');
+            const img = document.createElement('img');
+            const title = document.createElement('h1');
+            const description = document.createElement('p');
+            const priceOfProduct = document.createElement('p');
+            const button = document.createElement('button');
+            womenC.appendChild(product);
+            womenC.style.display = 'flex';
+            product.classList.add('product-container'); // for hover
+            product.style.background = "rgba(255, 255, 255, 0.15)";
+            product.style.borderRadius = '12px';
+            product.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.25)";
+            product.style.backdropFilter = "blur(8px)";
+            product.style.transform = "transform 0.3s ease, box-shadow 0.3s ease";
+            product.style.width = '45vh';
+            product.style.height = '50vh';
+            product.style.display = 'flex';
+            product.style.flexDirection = 'column';
+            product.style.justifyContent = 'space-around';
+            product.style.alignItems = 'center';
+            product.style.textAlign = 'center';
+            // title 
+            product.appendChild(title);
+            title.textContent = arrOfWomenClothing[i].title;
+            // img
+            product.appendChild(img);
+            img.src = arrOfWomenClothing[i].image;
+            img.style.width = '10vh';
+            img.style.height = '10vh';
+            //desc
+            product.appendChild(description);
+            description.textContent = arrOfWomenClothing[i].description;
+            description.style.fontSize = '1.2rem';
+            // price
+            product.appendChild(priceOfProduct);
+            priceOfProduct.textContent = arrOfWomenClothing[i].price + "$";
+            priceOfProduct.style.fontSize = '1.5rem';
+            priceOfProduct.style.fontWeight = 'bold';
+            // btn
+            product.appendChild(button);
+            button.classList.add('add-to-cart-btn');
+            button.textContent = 'Add to Cart';
+            button.style.marginBottom = '2vh';
+            isWomenCreated = true;
     }
 }
+}
+
+const womenClothing = new WomenClothing();
 
 class Jewelery {
     constructor (data) {
@@ -166,8 +231,9 @@ navig.addEventListener('click', async function (e) {
         console.log("men's clothing");
         menClothing.renderMenClothing();
     }
-    if (selected_text.textContent == "jewelery") {
+    if (selected_text.textContent == "jewelery" && !isWomenActive) {
         console.log("jewelery");
+        womenClothing.renderWomenClothing();
     }
     if (selected_text.textContent == "electronics") {
         console.log("electronics");
