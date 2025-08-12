@@ -12,9 +12,12 @@ const menC = document.querySelector('.menC');
 const womenC = document.querySelector('.womenC');
 const electronics = document.querySelector('.electronics');
 const jewelery = document.querySelector('.jewelery');
-
+// animated cart
+const animatedCart = document.querySelector('.animatedCart');
+const animatedCartImg = document.querySelector('.imgAnimatedCart');
 // Endpoint Of DOM Manipulation
 
+// delay fn
 function wait (ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -151,6 +154,14 @@ class MenClothing {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            button.onclick = async function () {
+                animatedCart.style.display = 'flex';
+                animatedCart.classList.add('moveRight');
+                animatedCartImg.src = arrOfMenClothing[i].image;
+                await wait (1200);
+                animatedCart.style.display = 'none';
+                animatedCart.classList.remove('moveRight');
+            }
             // checking
             isManCreated = true;
         }
@@ -219,6 +230,14 @@ class WomenClothing {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            button.onclick = async function () {
+                animatedCart.style.display = 'flex';
+                animatedCart.classList.add('moveRight');
+                animatedCartImg.src = arrOfWomenClothing[i].image;
+                await wait (1200);
+                animatedCart.style.display = 'none';
+                animatedCart.classList.remove('moveRight');
+            }
             isWomenCreated = true;
     }
 }
@@ -287,6 +306,14 @@ class Electronics {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            button.onclick = async function () {
+                animatedCart.style.display = 'flex';
+                animatedCart.classList.add('moveRight');
+                animatedCartImg.src = arrOfElectronics[i].image;
+                await wait (1200);
+                animatedCart.style.display = 'none';
+                animatedCart.classList.remove('moveRight');
+            }
             isElectronicCreated = true;
     }
 }
@@ -355,6 +382,14 @@ class Jewelery {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            button.onclick = async function () {
+                animatedCart.style.display = 'flex';
+                animatedCart.classList.add('moveRight');
+                animatedCartImg.src = arrOfJewelery[i].image;
+                await wait (1200);
+                animatedCart.style.display = 'none';
+                animatedCart.classList.remove('moveRight');
+            }
             isJeweleryCreated = true;
     }
     }

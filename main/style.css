@@ -52,6 +52,37 @@ body {
     height: 8vh;
 }
 
+/* cart animation */
+
+.imgAnimatedCart {
+    width: 6vh;
+    height: 6vh;
+}
+
+.moveRight {
+    animation: slideRight 1s forwards;
+}
+
+/* animation keyFrame */
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(63.5vh);
+  }
+}
+
+.animatedCart {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    margin-top: 3vh;
+    margin-left: 40vh;
+}
+
 /* main section */
 
 .products-container {
@@ -206,3 +237,4 @@ p, h1 {
   transform: scale(0.95);
   box-shadow: 0 4px 10px rgba(255, 126, 95, 0.5);
 }
+
