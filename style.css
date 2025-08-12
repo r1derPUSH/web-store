@@ -57,28 +57,29 @@ body {
 .products-container {
     display: flex;
     margin: 3vh;
+    margin-top: 10vh;
 }
 
 /* animated "select-menu" styles */
 
 .box {
-    width: 30vh;
-    height: 20vh;
+    width: 22vh;
+    height: 10vh;
     margin: 20px;
 }
 
 .selected-text {
-    margin-top: -1vh;
+    margin-top: -0.2vh;
 }
 
 .selected_option {
     height: 2.5vh;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #000;
     background-color: #fff;
-    padding: 1.5vh;
-    border-radius: 2vh;
+    padding: 1vh;
+    border-radius: 20px;
     cursor: pointer;
     position: relative;
 }
@@ -87,8 +88,8 @@ body {
     position: absolute;
     right: 1.7vh;
     top: 1.2vh;
-    width: 1.5vh;
-    height: 1.5vh;
+    width: 1.2vh;
+    height: 1.2vh;
     border-top: 0.5vh solid;
     border-left: 0.5vh solid;
     rotate: -135deg;
@@ -113,18 +114,23 @@ nav {
     background-color: #fff;
     border-radius: 10px;
     transition: 0.3s;
+    z-index: 2;
 }
 
 .nav_active {
     height: 27vh;
 }
 
+nav ul {
+    margin-right: 2vh;
+}
+
 nav ul li {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: #fff;
     color: #000;
     list-style: none;
-    padding: 1vh 1.5vh;
+    padding: .5vh;
     cursor: pointer;
     transform: scale(0.5);
     opacity: 0;
@@ -151,6 +157,11 @@ nav::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     width: 98vw;
+    margin-left: -1vh;
+}
+
+.main {
+    margin-right: 30vw;
 }
 
 .product-container {
