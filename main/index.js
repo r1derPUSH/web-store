@@ -17,13 +17,16 @@ const animatedCart = document.querySelector('.animatedCart');
 const animatedCartImg = document.querySelector('.imgAnimatedCart');
 // Endpoint Of DOM Manipulation
 
+// localStorage.clear();
+
 // delay fn
 function wait (ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
 async function renderWebsite() {
+
+    let userCart = [];
 
 
 // select-menu code
@@ -87,6 +90,13 @@ const arrOfJewelery = data.filter(item => item.category == "jewelery");
 // console.log(arrOfWomenClothing);
 // console.log(arrOfElectronics);
 // console.log(arrOfJewelery);
+
+
+
+function addUserCartInfo(id) {
+    userCart.push(id);
+}
+
 
 // Products
 
@@ -155,12 +165,16 @@ class MenClothing {
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
             button.onclick = async function () {
+                addUserCartInfo(arrOfMenClothing[i].id);
+                console.log(userCart);
                 animatedCart.style.display = 'flex';
                 animatedCart.classList.add('moveRight');
                 animatedCartImg.src = arrOfMenClothing[i].image;
                 await wait (1200);
                 animatedCart.style.display = 'none';
                 animatedCart.classList.remove('moveRight');
+                localStorage.setItem('id', JSON.stringify([...(JSON.parse(localStorage.getItem('id')) || []), arrOfMenClothing[i].id]));
+                localStorage.setItem('idOfMenClothing', JSON.stringify([...(JSON.parse(localStorage.getItem('idOfMenClothing')) || []), arrOfMenClothing[i].id]));
             }
             // checking
             isManCreated = true;
@@ -231,12 +245,16 @@ class WomenClothing {
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
             button.onclick = async function () {
+                addUserCartInfo(arrOfWomenClothing[i].id);
+                console.log(userCart);
                 animatedCart.style.display = 'flex';
                 animatedCart.classList.add('moveRight');
                 animatedCartImg.src = arrOfWomenClothing[i].image;
                 await wait (1200);
                 animatedCart.style.display = 'none';
                 animatedCart.classList.remove('moveRight');
+                localStorage.setItem('id', JSON.stringify([...(JSON.parse(localStorage.getItem('id')) || []), arrOfWomenClothing[i].id]));
+                localStorage.setItem('idOfWomenClothing', JSON.stringify([...(JSON.parse(localStorage.getItem('idOfWomenClothing')) || []), arrOfWomenClothing[i].id]));
             }
             isWomenCreated = true;
     }
@@ -307,12 +325,16 @@ class Electronics {
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
             button.onclick = async function () {
+                addUserCartInfo(arrOfElectronics[i].id);
+                console.log(userCart);
                 animatedCart.style.display = 'flex';
                 animatedCart.classList.add('moveRight');
                 animatedCartImg.src = arrOfElectronics[i].image;
                 await wait (1200);
                 animatedCart.style.display = 'none';
                 animatedCart.classList.remove('moveRight');
+                localStorage.setItem('id', JSON.stringify([...(JSON.parse(localStorage.getItem('id')) || []), arrOfElectronics[i].id]));
+                localStorage.setItem('idOfElectronics', JSON.stringify([...(JSON.parse(localStorage.getItem('idOfElectronics')) || []), arrOfElectronics[i].id]));
             }
             isElectronicCreated = true;
     }
@@ -383,12 +405,16 @@ class Jewelery {
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
             button.onclick = async function () {
+                addUserCartInfo(arrOfJewelery[i].id);
+                console.log(userCart);
                 animatedCart.style.display = 'flex';
                 animatedCart.classList.add('moveRight');
                 animatedCartImg.src = arrOfJewelery[i].image;
                 await wait (1200);
                 animatedCart.style.display = 'none';
                 animatedCart.classList.remove('moveRight');
+                localStorage.setItem('id', JSON.stringify([...(JSON.parse(localStorage.getItem('id')) || []), arrOfJewelery[i].id]));
+                localStorage.setItem('idOfJewelery', JSON.stringify([...(JSON.parse(localStorage.getItem('idOfJewelery')) || []), arrOfJewelery[i].id]));
             }
             isJeweleryCreated = true;
     }
