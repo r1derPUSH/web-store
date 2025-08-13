@@ -4,14 +4,28 @@ body {
   background: linear-gradient(135deg, #2c3e50, #4ca1af);
   color: #eee;
   min-height: 100vh;
-  overflow: hidden;
+  max-width: 100vw;
+  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 .menC,
 .womanC,
 .electronics,
 .jewelery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.rows {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* кількість рядків */
+  -webkit-box-orient: vertical;
 }
