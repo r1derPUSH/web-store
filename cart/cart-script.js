@@ -34,12 +34,11 @@ const manSectionLength = JSON.parse(localStorage.getItem('idOfMenClothing'));
 console.log(manSectionLength);
 
 class CartOfManClothing {
-   // ІДЕЯ: ПРИВЯЗАТИ ПОДІЮ ПРИ ДОДАВАННІ АЙДІ ДО 'id' ТАКОЖ ПРИВЯЗАТИ НОВИЙ АЙТЕМ ЛОКАЛ СТОРЕДЖУ (НАПРИКЛАД idOfWomenCLothes) 
-   // ДЛЯ ПОДАЛЬШОГО ВИКОРИСТАННЯ НА НАСТУПНІЙ СТОРІНЦІ ТА ДИНАМІЧНОГО ВІДОБРАЖЕННЯ ЦИХ ПРОДУКТІВ
+   // ДОДУМАТИ ЛОГІКУ З КІЛЬКІСТЮ ПРОДУКТІВ
     renderManCartSection () {
         // container
         for (let i = 0; i < manSectionLength.length; i++) {
-            // console.log(arrOfMenClothing[manSectionLength[i] - 1])
+            // console.log(arrOfMenClothing[manSectionLength[i] - 1])   
             const container = document.createElement('div');
             menC.appendChild(container);
             container.style.display = 'flex';
@@ -49,6 +48,7 @@ class CartOfManClothing {
             container.style.width = '100vw';
             container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
             container.style.margin = '1vh';
+            container.style.borderRadius = '50px';
             // item name
             const name = document.createElement('p');
             container.appendChild(name);
