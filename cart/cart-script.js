@@ -88,6 +88,10 @@ class CartOfManClothing {
     }
 }
 
+class CartOfWomanClothing {
+    // logic later
+}
+
 const createManProps = new CartOfManClothing();
 createManProps.renderManCartSection();
 
