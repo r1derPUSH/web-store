@@ -30,6 +30,33 @@ const arrOfJewelery = data.filter(item => item.category == "jewelery");
 // console.log(userCart);
 // products of user
 
+//constants for logic
+
+//man
+let id1 = false;
+let quantId1 = 1;
+let id2 = false;
+let quantId2 = 1;
+let id3 = false;
+let quantId3 = 1;
+let id4 = false;
+let quantId4 = 1;
+//woman
+let id5 = false;
+let id6 = false;
+let id7 = false;
+let id8 = false;
+// electronics
+let id9 = false;
+let id10 = false;
+let id11 = false;
+let id12 = false;
+// women
+let id13 = false;
+let id14 = false;
+let id15 = false;
+let id16 = false;
+
 const manSectionLength = JSON.parse(localStorage.getItem('idOfMenClothing'));
 console.log(manSectionLength);
 
@@ -37,8 +64,29 @@ class CartOfManClothing {
    // ДОДУМАТИ ЛОГІКУ З КІЛЬКІСТЮ ПРОДУКТІВ
     renderManCartSection () {
         // container
+        const quantity = document.createElement('p');
         for (let i = 0; i < manSectionLength.length; i++) {
-            // console.log(arrOfMenClothing[manSectionLength[i] - 1])   
+            if (id1) {
+                quantId1++;
+                quantity.textContent = `Quantity: ${quantId1}`;
+                console.log('worked out');
+            }
+            if (id2) {
+                quantId2++;
+                quantity.textContent = `Quantity: ${quantId2}`;
+            }
+            if (id3) {
+                quantId3++;
+                quantity.textContent = `Quantity: ${quantId3}`;
+            }
+            if (id4) {
+                quantId4++;
+                quantity.textContent = `Quantity: ${quantId4}`;
+            }
+            // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+            //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+            // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+            //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
             const container = document.createElement('div');
             menC.appendChild(container);
             container.style.display = 'flex';
@@ -79,11 +127,22 @@ class CartOfManClothing {
             description.style.webkitLineClamp = '3';
             description.style.webkitBoxOrient = 'vertical';
             // quantity 
-            const quantity = document.createElement('p');
             container.appendChild(quantity);
             quantity.textContent = 'Quantity: 1';
             quantity.style.fontSize = '1.3rem';
             quantity.style.fontWeight = 'bold';
+            if (manSectionLength[i] == 1) {
+                id1 = true;
+            }
+            if (manSectionLength[i] == 2) {
+                id2 = true;
+            }
+            if (manSectionLength[i] == 3) {
+                id3 = true;
+            }
+            if (manSectionLength[i] == 4) {
+                id1 = true;
+            }
         }
     }
 }
