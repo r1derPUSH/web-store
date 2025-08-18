@@ -28,6 +28,7 @@ const arrOfWomenClothing = data.filter(item => item.category == "women's clothin
 console.log(arrOfWomenClothing);
 const arrOfElectronics = data.filter(item => item.category == "electronics");
 const arrOfJewelery = data.filter(item => item.category == "jewelery");
+console.log(arrOfJewelery);
 
 // console.log(userCart);
 // products of user
@@ -41,6 +42,7 @@ const manSectionLength = JSON.parse(localStorage.getItem('idOfMenClothing'));
 const womanSectionLength = JSON.parse(localStorage.getItem('idOfWomenClothing'));
 const electronicsSectionLength = JSON.parse(localStorage.getItem('idOfElectronics'));
 const jewelerySectionLength = JSON.parse(localStorage.getItem('idOfJewelery'));
+console.log(jewelerySectionLength);
 
 class CartOfManClothing {
    // ДОДУМАТИ ЛОГІКУ З КІЛЬКІСТЮ ПРОДУКТІВ
@@ -530,23 +532,23 @@ class CartOfElectronics {
                 container.appendChild(name);
                 name.style.fontSize = '1.2rem';
                 name.style.fontWeight = 'bold';
-                name.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].title;
+                name.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].title;
                 // img 
                 const img = document.createElement('img');
                 container.appendChild(img);
-                img.src = arrOfElectronics[electronicsSectionLength[i] - 8].image;
+                img.src = arrOfElectronics[electronicsSectionLength[i] - 9].image;
                 img.style.width = '8vh';
                 img.style.height = '8vh';
                 // price
                 const price = document.createElement('p');
                 container.appendChild(price);
-                price.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].price + "$";
+                price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
                 const description = document.createElement('p');
                 container.appendChild(description);
-                description.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].description;
+                description.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].description;
                 description.style.maxWidth = '20vw';
                 description.style.fontSize = '1.1rem';
                 description.style.overflow = 'hidden';
@@ -582,23 +584,23 @@ class CartOfElectronics {
                 container.appendChild(name);
                 name.style.fontSize = '1.2rem';
                 name.style.fontWeight = 'bold';
-                name.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].title;
+                name.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].title;
                 // img 
                 const img = document.createElement('img');
                 container.appendChild(img);
-                img.src = arrOfElectronics[electronicsSectionLength[i] - 8].image;
+                img.src = arrOfElectronics[electronicsSectionLength[i] - 9].image;
                 img.style.width = '8vh';
                 img.style.height = '8vh';
                 // price
                 const price = document.createElement('p');
                 container.appendChild(price);
-                price.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].price + "$";
+                price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
                 const description = document.createElement('p');
                 container.appendChild(description);
-                description.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].description;
+                description.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].description;
                 description.style.maxWidth = '20vw';
                 description.style.fontSize = '1.1rem';
                 description.style.overflow = 'hidden';
@@ -634,23 +636,23 @@ class CartOfElectronics {
                 container.appendChild(name);
                 name.style.fontSize = '1.2rem';
                 name.style.fontWeight = 'bold';
-                name.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].title;
+                name.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].title;
                 // img 
                 const img = document.createElement('img');
                 container.appendChild(img);
-                img.src = arrOfElectronics[electronicsSectionLength[i] - 8].image;
+                img.src = arrOfElectronics[electronicsSectionLength[i] - 9].image;
                 img.style.width = '8vh';
                 img.style.height = '8vh';
                 // price
                 const price = document.createElement('p');
                 container.appendChild(price);
-                price.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].price + "$";
+                price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
                 const description = document.createElement('p');
                 container.appendChild(description);
-                description.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].description;
+                description.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].description;
                 description.style.maxWidth = '20vw';
                 description.style.fontSize = '1.1rem';
                 description.style.overflow = 'hidden';
@@ -686,23 +688,23 @@ class CartOfElectronics {
                 container.appendChild(name);
                 name.style.fontSize = '1.2rem';
                 name.style.fontWeight = 'bold';
-                name.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].title;
+                name.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].title;
                 // img 
                 const img = document.createElement('img');
                 container.appendChild(img);
-                img.src = arrOfElectronics[electronicsSectionLength[i] - 8].image;
+                img.src = arrOfElectronics[electronicsSectionLength[i] - 9].image;
                 img.style.width = '8vh';
                 img.style.height = '8vh';
                 // price
                 const price = document.createElement('p');
                 container.appendChild(price);
-                price.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].price + "$";
+                price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
                 const description = document.createElement('p');
                 container.appendChild(description);
-                description.textContent = arrOfElectronics[electronicsSectionLength[i] - 8].description;
+                description.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].description;
                 description.style.maxWidth = '20vw';
                 description.style.fontSize = '1.1rem';
                 description.style.overflow = 'hidden';
@@ -716,6 +718,226 @@ class CartOfElectronics {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId12 = true;
+        }
+    }
+    }
+}
+
+class CartOfJewelery {
+    renderJewelerySection () {
+        let isId13 = false;
+        let isId14 = false;
+        let isId15 = false;
+        let isId16 = false;
+        // container
+        for (let i = 0; i < jewelerySectionLength.length; i++) {
+            if (jewelerySectionLength[i] == 5 && !isId13) {
+                const quantity = document.createElement('p');
+                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
+                const container = document.createElement('div');
+                menC.appendChild(container);
+                container.style.display = 'flex';
+                container.style.justifyContent = 'space-around';
+                container.style.alignItems = 'center';
+                container.style.height = '12vh';
+                container.style.width = '100vw';
+                container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
+                container.style.margin = '1vh';
+                container.style.borderRadius = '50px';
+                // item name
+                const name = document.createElement('p');
+                container.appendChild(name);
+                name.style.fontSize = '1.2rem';
+                name.style.fontWeight = 'bold';
+                name.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].title;
+                // img 
+                const img = document.createElement('img');
+                container.appendChild(img);
+                img.src = arrOfJewelery[jewelerySectionLength[i] - 5].image;
+                img.style.width = '8vh';
+                img.style.height = '8vh';
+                // price
+                const price = document.createElement('p');
+                container.appendChild(price);
+                price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
+                price.style.fontSize = '1.5rem';
+                price.style.fontWeight = 'bold';
+                //description
+                const description = document.createElement('p');
+                container.appendChild(description);
+                description.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].description;
+                description.style.maxWidth = '20vw';
+                description.style.fontSize = '1.1rem';
+                description.style.overflow = 'hidden';
+                description.style.textOverflow = 'ellipsis';
+                description.style.display = '-webkit-box';
+                description.style.webkitLineClamp = '3';
+                description.style.webkitBoxOrient = 'vertical';
+                // quantity 
+                container.appendChild(quantity);
+                quantity.textContent = `Quantity: ${manId13.length}`;
+                quantity.style.fontSize = '1.3rem';
+                quantity.style.fontWeight = 'bold';
+                isId13 = true;
+        }
+        if (jewelerySectionLength[i] == 6 && !isId14) {
+                const quantity = document.createElement('p');
+                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
+                const container = document.createElement('div');
+                menC.appendChild(container);
+                container.style.display = 'flex';
+                container.style.justifyContent = 'space-around';
+                container.style.alignItems = 'center';
+                container.style.height = '12vh';
+                container.style.width = '100vw';
+                container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
+                container.style.margin = '1vh';
+                container.style.borderRadius = '50px';
+                // item name
+                const name = document.createElement('p');
+                container.appendChild(name);
+                name.style.fontSize = '1.2rem';
+                name.style.fontWeight = 'bold';
+                name.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].title;
+                // img 
+                const img = document.createElement('img');
+                container.appendChild(img);
+                img.src = arrOfJewelery[jewelerySectionLength[i] - 5].image;
+                img.style.width = '8vh';
+                img.style.height = '8vh';
+                // price
+                const price = document.createElement('p');
+                container.appendChild(price);
+                price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
+                price.style.fontSize = '1.5rem';
+                price.style.fontWeight = 'bold';
+                //description
+                const description = document.createElement('p');
+                container.appendChild(description);
+                description.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].description;
+                description.style.maxWidth = '20vw';
+                description.style.fontSize = '1.1rem';
+                description.style.overflow = 'hidden';
+                description.style.textOverflow = 'ellipsis';
+                description.style.display = '-webkit-box';
+                description.style.webkitLineClamp = '3';
+                description.style.webkitBoxOrient = 'vertical';
+                // quantity 
+                container.appendChild(quantity);
+                quantity.textContent = `Quantity: ${manId14.length}`;
+                quantity.style.fontSize = '1.3rem';
+                quantity.style.fontWeight = 'bold';
+                isId14 = true;
+        }
+        if (jewelerySectionLength[i] == 7 && !isId15) {
+                const quantity = document.createElement('p');
+                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
+                const container = document.createElement('div');
+                menC.appendChild(container);
+                container.style.display = 'flex';
+                container.style.justifyContent = 'space-around';
+                container.style.alignItems = 'center';
+                container.style.height = '12vh';
+                container.style.width = '100vw';
+                container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
+                container.style.margin = '1vh';
+                container.style.borderRadius = '50px';
+                // item name
+                const name = document.createElement('p');
+                container.appendChild(name);
+                name.style.fontSize = '1.2rem';
+                name.style.fontWeight = 'bold';
+                name.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].title;
+                // img 
+                const img = document.createElement('img');
+                container.appendChild(img);
+                img.src = arrOfJewelery[jewelerySectionLength[i] - 5].image;
+                img.style.width = '8vh';
+                img.style.height = '8vh';
+                // price
+                const price = document.createElement('p');
+                container.appendChild(price);
+                price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
+                price.style.fontSize = '1.5rem';
+                price.style.fontWeight = 'bold';
+                //description
+                const description = document.createElement('p');
+                container.appendChild(description);
+                description.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].description;
+                description.style.maxWidth = '20vw';
+                description.style.fontSize = '1.1rem';
+                description.style.overflow = 'hidden';
+                description.style.textOverflow = 'ellipsis';
+                description.style.display = '-webkit-box';
+                description.style.webkitLineClamp = '3';
+                description.style.webkitBoxOrient = 'vertical';
+                // quantity 
+                container.appendChild(quantity);
+                quantity.textContent = `Quantity: ${manId15.length}`;
+                quantity.style.fontSize = '1.3rem';
+                quantity.style.fontWeight = 'bold';
+                isId15 = true;
+        }
+        if (jewelerySectionLength[i] == 8 && !isId16) {
+                const quantity = document.createElement('p');
+                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
+                const container = document.createElement('div');
+                menC.appendChild(container);
+                container.style.display = 'flex';
+                container.style.justifyContent = 'space-around';
+                container.style.alignItems = 'center';
+                container.style.height = '12vh';
+                container.style.width = '100vw';
+                container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
+                container.style.margin = '1vh';
+                container.style.borderRadius = '50px';
+                // item name
+                const name = document.createElement('p');
+                container.appendChild(name);
+                name.style.fontSize = '1.2rem';
+                name.style.fontWeight = 'bold';
+                name.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].title;
+                // img 
+                const img = document.createElement('img');
+                container.appendChild(img);
+                img.src = arrOfJewelery[jewelerySectionLength[i] - 5].image;
+                img.style.width = '8vh';
+                img.style.height = '8vh';
+                // price
+                const price = document.createElement('p');
+                container.appendChild(price);
+                price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
+                price.style.fontSize = '1.5rem';
+                price.style.fontWeight = 'bold';
+                //description
+                const description = document.createElement('p');
+                container.appendChild(description);
+                description.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].description;
+                description.style.maxWidth = '20vw';
+                description.style.fontSize = '1.1rem';
+                description.style.overflow = 'hidden';
+                description.style.textOverflow = 'ellipsis';
+                description.style.display = '-webkit-box';
+                description.style.webkitLineClamp = '3';
+                description.style.webkitBoxOrient = 'vertical';
+                // quantity 
+                container.appendChild(quantity);
+                quantity.textContent = `Quantity: ${manId16.length}`;
+                quantity.style.fontSize = '1.3rem';
+                quantity.style.fontWeight = 'bold';
+                isId16 = true;
         }
     }
     }
@@ -737,9 +959,12 @@ if (electronicsSectionLength !== null) {
     const createElecProps = new CartOfElectronics();
     createElecProps.rednerElectronicsSection();
 }
+// jew
 if (jewelerySectionLength !== null) {
-    //
+    const createJewProps = new CartOfJewelery();
+    createJewProps.renderJewelerySection();
 }
+
 }
 
 renderWebsite();

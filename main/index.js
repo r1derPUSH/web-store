@@ -485,15 +485,15 @@ class Jewelery {
                 }
                 if (arrOfJewelery[i].id == 6) {
                     counterBtn14++;
-                    localStorage.setItem('clicksOnElectronicsId2', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId2')) || []), counterBtn14]));
+                    localStorage.setItem('clicksOnJeweleryId2', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnJeweleryId2')) || []), counterBtn14]));
                 }
                 if (arrOfJewelery[i].id == 7) {
                     counterBtn15++;
-                    localStorage.setItem('clicksOnElectronicsId3', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId3')) || []), counterBtn15]));
+                    localStorage.setItem('clicksOnJeweleryId3', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnJeweleryId3')) || []), counterBtn15]));
                 }
                 if (arrOfJewelery[i].id == 8) {
                     counterBtn16++;
-                    localStorage.setItem('clicksOnElectronicsId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId4')) || []), counterBtn16]));
+                    localStorage.setItem('clicksOnJeweleryId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnJeweleryId4')) || []), counterBtn16]));
                 }
             }
             isJeweleryCreated = true;
