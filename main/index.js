@@ -364,6 +364,10 @@ class Electronics {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            let counterBtn9 = 0;
+            let counterBtn10 = 0;
+            let counterBtn11 = 0;
+            let counterBtn12 = 0;
             button.onclick = async function () {
                 addUserCartInfo(arrOfElectronics[i].id);
                 console.log(userCart);
@@ -375,6 +379,22 @@ class Electronics {
                 animatedCart.classList.remove('moveRight');
                 localStorage.setItem('id', JSON.stringify([...(JSON.parse(localStorage.getItem('id')) || []), arrOfElectronics[i].id]));
                 localStorage.setItem('idOfElectronics', JSON.stringify([...(JSON.parse(localStorage.getItem('idOfElectronics')) || []), arrOfElectronics[i].id]));
+                if (arrOfElectronics[i].id == 9) {
+                    counterBtn9++;
+                    localStorage.setItem('clicksOnElectronicsId1', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId1')) || []), counterBtn9]));
+                }
+                if (arrOfElectronics[i].id == 10) {
+                    counterBtn10++;
+                    localStorage.setItem('clicksOnElectronicsId2', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId2')) || []), counterBtn10]));
+                }
+                if (arrOfElectronics[i].id == 11) {
+                    counterBtn11++;
+                    localStorage.setItem('clicksOnElectronicsId3', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId3')) || []), counterBtn11]));
+                }
+                if (arrOfElectronics[i].id == 12) {
+                    counterBtn12++;
+                    localStorage.setItem('clicksOnElectronicsId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId4')) || []), counterBtn12]));
+                }
             }
             isElectronicCreated = true;
     }
@@ -444,6 +464,10 @@ class Jewelery {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            let counterBtn13 = 0;
+            let counterBtn14 = 0;
+            let counterBtn15 = 0;
+            let counterBtn16 = 0;
             button.onclick = async function () {
                 addUserCartInfo(arrOfJewelery[i].id);
                 console.log(userCart);
@@ -455,6 +479,22 @@ class Jewelery {
                 animatedCart.classList.remove('moveRight');
                 localStorage.setItem('id', JSON.stringify([...(JSON.parse(localStorage.getItem('id')) || []), arrOfJewelery[i].id]));
                 localStorage.setItem('idOfJewelery', JSON.stringify([...(JSON.parse(localStorage.getItem('idOfJewelery')) || []), arrOfJewelery[i].id]));
+                if (arrOfJewelery[i].id == 5) {
+                    counterBtn13++;
+                    localStorage.setItem('clicksOnJeweleryId1', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnJeweleryId1')) || []), counterBtn13]));
+                }
+                if (arrOfJewelery[i].id == 6) {
+                    counterBtn14++;
+                    localStorage.setItem('clicksOnElectronicsId2', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId2')) || []), counterBtn14]));
+                }
+                if (arrOfJewelery[i].id == 7) {
+                    counterBtn15++;
+                    localStorage.setItem('clicksOnElectronicsId3', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId3')) || []), counterBtn15]));
+                }
+                if (arrOfJewelery[i].id == 8) {
+                    counterBtn16++;
+                    localStorage.setItem('clicksOnElectronicsId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId4')) || []), counterBtn16]));
+                }
             }
             isJeweleryCreated = true;
     }
