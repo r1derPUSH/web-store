@@ -93,91 +93,104 @@ body {
 
 /* animated "select-menu" styles */
 
+/* контейнер */
 .box {
-    width: 22vh;
-    height: 10vh;
-    margin: 20px;
+    width: 30vh;
+    margin: 2vh;
 }
 
-.selected-text {
-    margin-top: -0.2vh;
-}
-
+/* вибраний елемент */
 .selected_option {
-    height: 2.5vh;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #000;
-    background-color: #fff;
-    padding: 1vh;
-    border-radius: 20px;
+    height: 6vh;
+    font-size: 2vh;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255,255,255,0.15);
+    padding: 0 2vh;
+    border-radius: 1.2vh;
     cursor: pointer;
     position: relative;
+    border: 0.2vh solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(0.6vh);
+    transition: background 0.3s, border-color 0.3s;
 }
 
+.selected_option:hover {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.6);
+}
+
+/* стрілочка */
 .arrow {
-    position: absolute;
-    right: 1.7vh;
-    top: 1.2vh;
-    width: 1.2vh;
-    height: 1.2vh;
-    border-top: 0.5vh solid;
-    border-left: 0.5vh solid;
+    width: 1.4vh;
+    height: 1.4vh;
+    border-top: 0.3vh solid #fff;
+    border-left: 0.3vh solid #fff;
     rotate: -135deg;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .arrow_active {
-    top: 2.5vh;
     rotate: 45deg;
+    margin-top: 0.7vh;
 }
 
+/* список */
 .option_box {
     position: relative;
-    margin-top: 15px;
+    margin-top: 1vh;
 }
 
 nav {
     position: absolute;
+    /* top: 6.5vh; */
     width: 100%;
-    height: 0px;
-    overflow-y: auto;
-    background-color: #fff;
-    border-radius: 10px;
-    transition: 0.3s;
-    z-index: 2;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(0,0,0,0.4);
+    border: 0.2vh solid rgba(255,255,255,0.3);
+    border-radius: 1vh;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 0.6vh 1.5vh rgba(0,0,0,0.3);
+    backdrop-filter: blur(0.8vh);
+    z-index: 5;
 }
 
 .nav_active {
-    height: 27vh;
+    max-height: 30vh;
+    overflow-y: auto;
 }
 
+/* опції */
 nav ul {
-    margin-right: 2vh;
+    padding: 0.7vh 0;
+    margin: 0;
 }
 
 nav ul li {
-    font-size: 1.2rem;
-    background-color: #fff;
-    color: #000;
+    font-size: 2vh;
+    color: #fff;
     list-style: none;
-    padding: .5vh;
+    padding: 1.5vh 2vh;
     cursor: pointer;
-    transform: scale(0.5);
-    opacity: 0;
-    transition: 0.3s;
+    transition: background 0.2s;
+    border-radius: 0.7vh;
 }
 
 nav ul li:hover {
-    background-color: hsl(0, 0%, 31%);
+    background: rgba(255, 126, 95, 0.7);
 }
 
+/* скролбар */
 nav::-webkit-scrollbar {
-    width: 1.2vh;
+    width: 0.8vh;
 }
 nav::-webkit-scrollbar-thumb {
-    background-color: #5e35b1;
-    border-radius: 10px;
+    background-color: #feb47b;
+    border-radius: 1vh;
 }
 
 .menC,

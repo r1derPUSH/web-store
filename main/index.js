@@ -38,7 +38,6 @@ async function renderWebsite() {
 
         if (option_box.classList.contains('nav_active')) {
             arrow.classList.add("arrow_active");
-
             for (let i = 0; i < options.length; i++) {
                 const element = options[i];
                 element.onclick = function() {
