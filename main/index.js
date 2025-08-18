@@ -164,7 +164,12 @@ class MenClothing {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            let counterBtn1 = 0;
+            let counterBtn2 = 0;
+            let counterBtn3 = 0;
+            let counterBtn4 = 0;
             button.onclick = async function () {
+                
                 addUserCartInfo(arrOfMenClothing[i].id);
                 console.log(userCart);
                 animatedCart.style.display = 'flex';
@@ -175,7 +180,23 @@ class MenClothing {
                 animatedCart.classList.remove('moveRight');
                 localStorage.setItem('id', JSON.stringify([...(JSON.parse(localStorage.getItem('id')) || []), arrOfMenClothing[i].id]));
                 localStorage.setItem('idOfMenClothing', JSON.stringify([...(JSON.parse(localStorage.getItem('idOfMenClothing')) || []), arrOfMenClothing[i].id]));
-            }
+                if (arrOfMenClothing[i].id == 1) {
+                    counterBtn1++;
+                    localStorage.setItem('clicksOnMenId1', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnMenId1')) || []), counterBtn1]));
+                }
+                if (arrOfMenClothing[i].id == 2) {
+                    counterBtn2++;
+                    localStorage.setItem('clicksOnMenId2', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnMenId2')) || []), counterBtn2]));
+                }
+                if (arrOfMenClothing[i].id == 3) {
+                    counterBtn3++;
+                    localStorage.setItem('clicksOnMenId3', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnMenId3')) || []), counterBtn3]));
+                }
+                if (arrOfMenClothing[i].id == 4) {
+                    counterBtn4++;
+                    localStorage.setItem('clicksOnMenId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnMenId4')) || []), counterBtn4]));
+                }
+                }
             // checking
             isManCreated = true;
         }
