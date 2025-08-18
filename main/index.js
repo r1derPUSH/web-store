@@ -53,7 +53,6 @@ async function renderWebsite() {
         }
         else {
             arrow.classList.remove('arrow_active');
-
             for (let i = 0; i < options.length; i++) {
                 const element = options[i];
                 setTimeout(() => {
@@ -265,6 +264,10 @@ class WomenClothing {
             button.classList.add('add-to-cart-btn');
             button.textContent = 'Add to Cart';
             button.style.marginBottom = '2vh';
+            let counterBtn5 = 0;
+            let counterBtn6 = 0;
+            let counterBtn7 = 0;
+            let counterBtn8 = 0;
             button.onclick = async function () {
                 addUserCartInfo(arrOfWomenClothing[i].id);
                 console.log(userCart);
@@ -276,6 +279,22 @@ class WomenClothing {
                 animatedCart.classList.remove('moveRight');
                 localStorage.setItem('id', JSON.stringify([...(JSON.parse(localStorage.getItem('id')) || []), arrOfWomenClothing[i].id]));
                 localStorage.setItem('idOfWomenClothing', JSON.stringify([...(JSON.parse(localStorage.getItem('idOfWomenClothing')) || []), arrOfWomenClothing[i].id]));
+                if (arrOfWomenClothing[i].id == 15) {
+                    counterBtn5++;
+                    localStorage.setItem('clicksOnWomanId1', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnWomanId1')) || []), counterBtn5]));
+                }
+                if (arrOfWomenClothing[i].id == 16) {
+                    counterBtn6++;
+                    localStorage.setItem('clicksOnWomanId2', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnWomanId2')) || []), counterBtn6]));
+                }
+                if (arrOfWomenClothing[i].id == 17) {
+                    counterBtn7++;
+                    localStorage.setItem('clicksOnWomanId3', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnWomanId3')) || []), counterBtn7]));
+                }
+                if (arrOfWomenClothing[i].id == 18) {
+                    counterBtn8++;
+                    localStorage.setItem('clicksOnWomanId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnWomanId4')) || []), counterBtn8]));
+                }
             }
             isWomenCreated = true;
     }

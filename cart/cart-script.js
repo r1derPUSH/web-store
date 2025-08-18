@@ -23,7 +23,9 @@ const data = await response.json();
 console.log(data);
 
 const arrOfMenClothing = data.filter(item => item.category == "men's clothing");
+console.log(arrOfMenClothing);
 const arrOfWomenClothing = data.filter(item => item.category == "women's clothing");
+console.log(arrOfWomenClothing);
 const arrOfElectronics = data.filter(item => item.category == "electronics");
 const arrOfJewelery = data.filter(item => item.category == "jewelery");
 
@@ -36,6 +38,11 @@ const arrOfJewelery = data.filter(item => item.category == "jewelery");
 
 
 const manSectionLength = JSON.parse(localStorage.getItem('idOfMenClothing'));
+console.log(manSectionLength);
+const womanSectionLength = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+console.log(womanSectionLength);
+const electronicsSectionLength = JSON.parse(localStorage.getItem('idOfElectronics'));
+const jewelerySectionLength = JSON.parse(localStorage.getItem('idOfJewelery'));
 console.log(manSectionLength);
 
 class CartOfManClothing {
@@ -260,15 +267,242 @@ class CartOfManClothing {
                 isId4 = true;
         }
     }
+    } //////
+}
+
+const manId5 = JSON.parse(localStorage.getItem('clicksOnWomanId1'));
+const manId6 = JSON.parse(localStorage.getItem('clicksOnWomanId2'));
+const manId7 = JSON.parse(localStorage.getItem('clicksOnWomanId3'));
+const manId8 = JSON.parse(localStorage.getItem('clicksOnWomanId4'));
+console.log(manId7);
+
+class CartOfWomanClothing {
+    renderWomanSection () {
+        let isId5 = false;
+        let isId6 = false;
+        let isId7 = false;
+        let isId8 = false;
+        // container
+        for (let i = 0; i < womanSectionLength.length; i++) {
+            if (womanSectionLength[i] == 15 && !isId5) {
+                const quantity = document.createElement('p');
+                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
+                const container = document.createElement('div');
+                menC.appendChild(container);
+                container.style.display = 'flex';
+                container.style.justifyContent = 'space-around';
+                container.style.alignItems = 'center';
+                container.style.height = '12vh';
+                container.style.width = '100vw';
+                container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
+                container.style.margin = '1vh';
+                container.style.borderRadius = '50px';
+                // item name
+                const name = document.createElement('p');
+                container.appendChild(name);
+                name.style.fontSize = '1.2rem';
+                name.style.fontWeight = 'bold';
+                name.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].title;
+                // img 
+                const img = document.createElement('img');
+                container.appendChild(img);
+                img.src = arrOfWomenClothing[womanSectionLength[i] - 15].image;
+                img.style.width = '8vh';
+                img.style.height = '8vh';
+                // price
+                const price = document.createElement('p');
+                container.appendChild(price);
+                price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
+                price.style.fontSize = '1.5rem';
+                price.style.fontWeight = 'bold';
+                //description
+                const description = document.createElement('p');
+                container.appendChild(description);
+                description.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].description;
+                description.style.maxWidth = '20vw';
+                description.style.fontSize = '1.1rem';
+                description.style.overflow = 'hidden';
+                description.style.textOverflow = 'ellipsis';
+                description.style.display = '-webkit-box';
+                description.style.webkitLineClamp = '3';
+                description.style.webkitBoxOrient = 'vertical';
+                // quantity 
+                container.appendChild(quantity);
+                quantity.textContent = `Quantity: ${manId5.length}`;
+                quantity.style.fontSize = '1.3rem';
+                quantity.style.fontWeight = 'bold';
+                isId5 = true;
+        }
+        if (womanSectionLength[i] == 16 && !isId6) {
+                const quantity = document.createElement('p');
+                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
+                const container = document.createElement('div');
+                menC.appendChild(container);
+                container.style.display = 'flex';
+                container.style.justifyContent = 'space-around';
+                container.style.alignItems = 'center';
+                container.style.height = '12vh';
+                container.style.width = '100vw';
+                container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
+                container.style.margin = '1vh';
+                container.style.borderRadius = '50px';
+                // item name
+                const name = document.createElement('p');
+                container.appendChild(name);
+                name.style.fontSize = '1.2rem';
+                name.style.fontWeight = 'bold';
+                name.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].title;
+                // img 
+                const img = document.createElement('img');
+                container.appendChild(img);
+                img.src = arrOfWomenClothing[womanSectionLength[i] - 15].image;
+                img.style.width = '8vh';
+                img.style.height = '8vh';
+                // price
+                const price = document.createElement('p');
+                container.appendChild(price);
+                price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
+                price.style.fontSize = '1.5rem';
+                price.style.fontWeight = 'bold';
+                //description
+                const description = document.createElement('p');
+                container.appendChild(description);
+                description.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].description;
+                description.style.maxWidth = '20vw';
+                description.style.fontSize = '1.1rem';
+                description.style.overflow = 'hidden';
+                description.style.textOverflow = 'ellipsis';
+                description.style.display = '-webkit-box';
+                description.style.webkitLineClamp = '3';
+                description.style.webkitBoxOrient = 'vertical';
+                // quantity 
+                container.appendChild(quantity);
+                quantity.textContent = `Quantity: ${manId6.length}`;
+                quantity.style.fontSize = '1.3rem';
+                quantity.style.fontWeight = 'bold';
+                isId6 = true;
+        }
+        if (womanSectionLength[i] == 17 && !isId7) {
+                const quantity = document.createElement('p');
+                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
+                const container = document.createElement('div');
+                menC.appendChild(container);
+                container.style.display = 'flex';
+                container.style.justifyContent = 'space-around';
+                container.style.alignItems = 'center';
+                container.style.height = '12vh';
+                container.style.width = '100vw';
+                container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
+                container.style.margin = '1vh';
+                container.style.borderRadius = '50px';
+                // item name
+                const name = document.createElement('p');
+                container.appendChild(name);
+                name.style.fontSize = '1.2rem';
+                name.style.fontWeight = 'bold';
+                name.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].title;
+                // img 
+                const img = document.createElement('img');
+                container.appendChild(img);
+                img.src = arrOfWomenClothing[womanSectionLength[i] - 15].image;
+                img.style.width = '8vh';
+                img.style.height = '8vh';
+                // price
+                const price = document.createElement('p');
+                container.appendChild(price);
+                price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
+                price.style.fontSize = '1.5rem';
+                price.style.fontWeight = 'bold';
+                //description
+                const description = document.createElement('p');
+                container.appendChild(description);
+                description.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].description;
+                description.style.maxWidth = '20vw';
+                description.style.fontSize = '1.1rem';
+                description.style.overflow = 'hidden';
+                description.style.textOverflow = 'ellipsis';
+                description.style.display = '-webkit-box';
+                description.style.webkitLineClamp = '3';
+                description.style.webkitBoxOrient = 'vertical';
+                // quantity 
+                container.appendChild(quantity);
+                quantity.textContent = `Quantity: ${manId7.length}`;
+                quantity.style.fontSize = '1.3rem';
+                quantity.style.fontWeight = 'bold';
+                isId7 = true;
+        }
+        if (womanSectionLength[i] == 18 && !isId8) {
+                const quantity = document.createElement('p');
+                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
+                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
+                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
+                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
+                const container = document.createElement('div');
+                menC.appendChild(container);
+                container.style.display = 'flex';
+                container.style.justifyContent = 'space-around';
+                container.style.alignItems = 'center';
+                container.style.height = '12vh';
+                container.style.width = '100vw';
+                container.style.background = 'linear-gradient(135deg, #34495e, #5dade2)';
+                container.style.margin = '1vh';
+                container.style.borderRadius = '50px';
+                // item name
+                const name = document.createElement('p');
+                container.appendChild(name);
+                name.style.fontSize = '1.2rem';
+                name.style.fontWeight = 'bold';
+                name.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].title;
+                // img 
+                const img = document.createElement('img');
+                container.appendChild(img);
+                img.src = arrOfWomenClothing[womanSectionLength[i] - 15].image;
+                img.style.width = '8vh';
+                img.style.height = '8vh';
+                // price
+                const price = document.createElement('p');
+                container.appendChild(price);
+                price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
+                price.style.fontSize = '1.5rem';
+                price.style.fontWeight = 'bold';
+                //description
+                const description = document.createElement('p');
+                container.appendChild(description);
+                description.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].description;
+                description.style.maxWidth = '20vw';
+                description.style.fontSize = '1.1rem';
+                description.style.overflow = 'hidden';
+                description.style.textOverflow = 'ellipsis';
+                description.style.display = '-webkit-box';
+                description.style.webkitLineClamp = '3';
+                description.style.webkitBoxOrient = 'vertical';
+                // quantity 
+                container.appendChild(quantity);
+                quantity.textContent = `Quantity: ${manId8.length}`;
+                quantity.style.fontSize = '1.3rem';
+                quantity.style.fontWeight = 'bold';
+                isId8 = true;
+        }
+    }
     }
 }
 
-class CartOfWomanClothing {
-    // logic later
-}
-
+// render class components
+// man
 const createManProps = new CartOfManClothing();
 createManProps.renderManCartSection();
+// woman
+const createWomanProps = new CartOfWomanClothing();
+createWomanProps.renderWomanSection();
 
 }
 
