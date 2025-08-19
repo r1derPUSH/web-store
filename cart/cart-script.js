@@ -13,7 +13,27 @@ btnBack.addEventListener('click', function () {
 })
 
 document.querySelector('.clearStorage').addEventListener('click', function () {
-    localStorage.clear();
+    localStorage.removeItem('clicksOnElectronicsId1');
+    localStorage.removeItem('clicksOnElectronicsId2');
+    localStorage.removeItem('clicksOnElectronicsId3');
+    localStorage.removeItem('clicksOnElectronicsId4');
+    localStorage.removeItem('clicksOnJeweleryId1');
+    localStorage.removeItem('clicksOnJeweleryId2');
+    localStorage.removeItem('clicksOnJeweleryId3');
+    localStorage.removeItem('clicksOnJeweleryId4');
+    localStorage.removeItem('clicksOnMenId1');
+    localStorage.removeItem('clicksOnMenId2');
+    localStorage.removeItem('clicksOnMenId3');
+    localStorage.removeItem('clicksOnMenId4');
+    localStorage.removeItem('clicksOnWomanId1');
+    localStorage.removeItem('clicksOnWomanId2');
+    localStorage.removeItem('clicksOnWomanId3');
+    localStorage.removeItem('clicksOnWomanId4');
+    localStorage.removeItem('idOfElectronics');
+    localStorage.removeItem('idOfJewelery');
+    localStorage.removeItem('idOfMenClothing');
+    localStorage.removeItem('idOfWomenClothing');
+    localStorage.removeItem('id');
     window.location = window.location;
 })
 

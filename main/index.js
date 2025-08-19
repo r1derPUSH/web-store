@@ -15,6 +15,8 @@ const jewelery = document.querySelector('.jewelery');
 // animated cart
 const animatedCart = document.querySelector('.animatedCart');
 const animatedCartImg = document.querySelector('.imgAnimatedCart');
+// text for user
+const userInfoName = document.querySelector('.userName');
 // login manipulation
 // register
 const header = document.querySelector('.header');
@@ -38,15 +40,32 @@ function wait (ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// alert('fun ');
+
+let isLoggedIn = localStorage.getItem('isLoggedIn');
+console.log(isLoggedIn);
+
+if (isLoggedIn) {
+    loginDiv.style.display = 'none';
+    renderWebsite();
+}
+
 function getUserInfo() {
-    if (localStorage.getItem('username') === null && localStorage.getItem('email') === null && localStorage.getItem('password') === null) {
+    if (email.value != '' && password.value != '' && username !='' && localStorage.getItem('username') === null && localStorage.getItem('email') === null && localStorage.getItem('password') === null) {
         localStorage.setItem('username', username.value);
         localStorage.setItem('email', email.value);
         localStorage.setItem('password', password.value);
+        localStorage.setItem('isLoggedIn', true);
         renderWebsite();
     }
     else {
-        const user = localStorage.getItem('username');
+        let user;
+        if (localStorage.getItem('username') === null) {
+            user = 'User';
+        }
+        else {
+            user = localStorage.getItem('username');
+        }
         textSignUp.textContent = `Dear ${user}, you have already been registered. Please login 😉`;
         textSignUp.style.color = 'red';
         textSignUp.style.marginLeft = '7vh'
@@ -57,7 +76,8 @@ function getUserInfo() {
 function getUserLoginInfo () {
     if (localStorage.getItem('username') !== null && localStorage.getItem('email') !== null && localStorage.getItem('password') !== null) {
         if (localStorage.getItem('email') == loginEmail.value && localStorage.getItem('password') == loginPassword.value) {
-            alert('you logged in!');
+            // alert('you logged in!');
+            localStorage.setItem('isLoggedIn', true);
             renderWebsite();
         } 
         else {
@@ -71,7 +91,7 @@ function getUserLoginInfo () {
 }
 
 async function renderWebsite() {
-        await wait(500);
+        await wait(200);
         loginDiv.style.display = 'none';
         header.style.display = 'block';
         mainS.style.display = 'block';
@@ -119,6 +139,11 @@ let userCart = [];
 const response = await fetch('https://fakestoreapi.com/products');
 const data = await response.json();
 console.log(data);
+
+// setting userName
+const user = localStorage.getItem('username');
+userInfoName.textContent = user;
+
 
 let isManActive = false;
 let isWomenActive = false;
@@ -217,7 +242,6 @@ class MenClothing {
             let counterBtn3 = 0;
             let counterBtn4 = 0;
             button.onclick = async function () {
-                
                 addUserCartInfo(arrOfMenClothing[i].id);
                 console.log(userCart);
                 animatedCart.style.display = 'flex';
