@@ -12,6 +12,10 @@ body {
 
 /* header section*/
 
+.header {
+    display: none;
+}
+
 .storeText {
     font-size: 3rem;
     font-weight: bold;
@@ -206,6 +210,7 @@ nav::-webkit-scrollbar-thumb {
 }
 
 .mainS {
+    display: none;
     margin-right: 30vw;
 }
 
@@ -248,86 +253,112 @@ p, h1 {
 }
 
 .add-to-cart-btn:active {
-  transform: scale(0.95);
-  box-shadow: 0 4px 10px rgba(255, 126, 95, 0.5);
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(255, 126, 95, 0.5);
 }
 
 /* login-form */
 
 .flexLogin {
-    margin-top: 20vh;
-    margin-bottom: 40vh;
+    /* margin-top: 20vh; */
     display: flex;
     justify-content: center;
     /* align-items: center; */
 }
 
 .main {
-  width: 50vh;
-  height: 60vh;
-  background: red;
-  overflow: hidden;
-  background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38")
+    margin-top: 20vh;
+    width: 50vh;
+    height: 60vh;
+    background: red;
+    overflow: hidden;
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38")
     no-repeat center/ cover;
-  border-radius: 10px;
-  box-shadow: 5px 20px 50px #000;
+    border-radius: 1vh;
+    box-shadow: 0.5vh 2vh 5vh #000;
 }
 #chk {
-  display: none;
+    display: none;
 }
 .signup {
-  position: relative;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 label {
-  color: #fff;
-  font-size: 2.3em;
-  justify-content: center;
-  display: flex;
-  margin: 50px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
+    color: #fff;
+    font-size: 2.3vh;
+    justify-content: center;
+    display: flex;
+    margin: 5vh;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
+
 input {
-  width: 60%;
-  height: 10px;
-  background: #e0dede;
-  justify-content: center;
-  display: flex;
-  margin: 20px auto;
-  padding: 12px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
+    width: 80%;
+    padding: 12px 15px;
+    margin: 10px auto;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    background: #f2f2f2;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    display: block;
 }
+
+input:focus {
+    border: 2px solid #7d3cff;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(125, 60, 255, 0.6);
+    transform: scale(1.02);
+}
+
+input:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+input::placeholder {
+    color: #999;
+    transition: 0.3s;
+}
+
+input:focus::placeholder {
+    opacity: 0.6;
+    transform: translateX(5px);
+}
+
 button {
-  width: 60%;
-  height: 40px;
-  margin: 10px auto;
-  justify-content: center;
-  display: block;
-  color: #fff;
-  background: #573b8a;
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 30px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  transition: 0.2s ease-in;
-  cursor: pointer;
+    width: 60%;
+    height: 5vh;
+    margin: 1vh auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #573b8a;
+    font-size: 1.2vh;
+    font-weight: bold;
+    margin-top: 3vh;
+    outline: none;
+    border: none;
+    border-radius: 0.5vh;
+    transition: 0.2s ease-in;
+    cursor: pointer;
 }
 button:hover {
   background: #6d44b8;
 }
 .login {
-  height: 460px;
-  background: #eee;
-  border-radius: 60% / 10%;
-  transform: translateY(-180px);
-  transition: 0.8s ease-in-out;
+    font-size: ;
+    height: 55vh;
+    background: #d9b076;
+    border-radius: 60% / 10%;
+    transform: translateY(-18vh);
+    transition: 0.8s ease-in-out;
 }
 .login label {
   color: #573b8a;
@@ -335,7 +366,7 @@ button:hover {
 }
 
 #chk:checked ~ .login {
-  transform: translateY(-500px);
+  transform: translateY(-59vh);
 }
 #chk:checked ~ .login label {
   transform: scale(1);
@@ -343,3 +374,4 @@ button:hover {
 #chk:checked ~ .signup label {
   transform: scale(0.6);
 }
+

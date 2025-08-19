@@ -15,6 +15,16 @@ const jewelery = document.querySelector('.jewelery');
 // animated cart
 const animatedCart = document.querySelector('.animatedCart');
 const animatedCartImg = document.querySelector('.imgAnimatedCart');
+// login manipulation
+// register
+const loginDiv = document.querySelector('.flexLogin');
+const username = document.querySelector('.username');
+const email = document.querySelector('.email');
+const password = document.querySelector('.password');
+const textSignUp = document.querySelector('.sign-up-text');
+// login
+const loginEmail = document.querySelector('.login-email');
+const loginPassword = document.querySelector('.login-password');
 // Endpoint Of DOM Manipulation
 
 // localStorage.clear();
@@ -24,9 +34,32 @@ function wait (ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function getUserInfo() {
+    if (localStorage.getItem('username') === null && localStorage.getItem('email') === null && localStorage.getItem('password') === null) {
+        localStorage.setItem('username', username.value);
+        localStorage.setItem('email', email.value);
+        localStorage.setItem('password', password.value);
+        loginDiv.style.display = 'none';
+    }
+    else {
+        const user = localStorage.getItem('username');
+        textSignUp.textContent = `Dear ${user}, you have already been registered. Please login 😉`;
+        textSignUp.style.color = 'red';
+        textSignUp.style.marginLeft = '7vh'
+        alert('you have been already registered');
+    }
+}
+
+function getUserLoginInfo () {
+    if (localStorage.getItem('username') !== null && localStorage.getItem('email') !== null && localStorage.getItem('password') !== null) {
+        
+    }
+}
+
 async function renderWebsite() {
 
-    let userCart = [];
+
+let userCart = [];
 
 
 // select-menu code
