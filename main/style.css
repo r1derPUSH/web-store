@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* header section*/
@@ -260,10 +260,8 @@ p, h1 {
 /* login-form */
 
 .flexLogin {
-    /* margin-top: 20vh; */
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .main {
@@ -353,7 +351,7 @@ button:hover {
   background: #6d44b8;
 }
 .login {
-    font-size: ;
+    font-size: 1.3rem;
     height: 55vh;
     background: #d9b076;
     border-radius: 60% / 10%;

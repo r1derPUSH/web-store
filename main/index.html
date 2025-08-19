@@ -16,7 +16,7 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form>
+				<form onsubmit="event.preventDefault()">
 					<label class="sign-up-text" for="chk" aria-hidden="true">Sign up</label>
 					<input class="username" type="text" pattern="[A-Za-z0-9]+" title="Only English letters and numbers" name="txt" placeholder="User name" required="">
 					<input class="email" type="email" name="email" placeholder="Email" required="">
@@ -26,10 +26,10 @@
 			</div>
 
 			<div class="login">
-				<form>
-					<label for="chk" aria-hidden="true">Login</label>
-					<input class="login-email" type="email" name="email" placeholder="Email" required="">
-					<input class="login-password" type="password" name="pswd" placeholder="Password" required="">
+				<form onsubmit="event.preventDefault()">
+					<label for="chk" aria-hidden="true"><p class="login-text">Login</p></label>
+					<input class="login-email" type="email" name="email" placeholder="Email" >
+					<input class="login-password" type="password" name="pswd" placeholder="Password" >
 					<button class="log-in-button" onclick="getUserLoginInfo()">Login</button>
 				</form>
 			</div>

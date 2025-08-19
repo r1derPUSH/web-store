@@ -17,6 +17,9 @@ const animatedCart = document.querySelector('.animatedCart');
 const animatedCartImg = document.querySelector('.imgAnimatedCart');
 // login manipulation
 // register
+const header = document.querySelector('.header');
+const mainS = document.querySelector('.mainS');
+const mainLogin = document.querySelector('.main');
 const loginDiv = document.querySelector('.flexLogin');
 const username = document.querySelector('.username');
 const email = document.querySelector('.email');
@@ -25,6 +28,7 @@ const textSignUp = document.querySelector('.sign-up-text');
 // login
 const loginEmail = document.querySelector('.login-email');
 const loginPassword = document.querySelector('.login-password');
+const loginText = document.querySelector('.login-text');
 // Endpoint Of DOM Manipulation
 
 // localStorage.clear();
@@ -39,26 +43,38 @@ function getUserInfo() {
         localStorage.setItem('username', username.value);
         localStorage.setItem('email', email.value);
         localStorage.setItem('password', password.value);
-        loginDiv.style.display = 'none';
-        
+        renderWebsite();
     }
     else {
         const user = localStorage.getItem('username');
         textSignUp.textContent = `Dear ${user}, you have already been registered. Please login 😉`;
         textSignUp.style.color = 'red';
         textSignUp.style.marginLeft = '7vh'
-        alert('you have been already registered');
+        // alert('you have been already registered');
     }
 }
 
 function getUserLoginInfo () {
     if (localStorage.getItem('username') !== null && localStorage.getItem('email') !== null && localStorage.getItem('password') !== null) {
-        
+        if (localStorage.getItem('email') == loginEmail.value && localStorage.getItem('password') == loginPassword.value) {
+            alert('you logged in!');
+            renderWebsite();
+        } 
+        else {
+            const user = localStorage.getItem('username');
+            loginText.textContent = `Dear ${user}, you entered wrong password or email 😣`;
+            loginText.style.color = 'red';
+            loginText.style.marginLeft = '3vh';
+            // loginText.stye.marginTop = '10vh';
+        }
     }
 }
 
 async function renderWebsite() {
-
+        await wait(500);
+        loginDiv.style.display = 'none';
+        header.style.display = 'block';
+        mainS.style.display = 'block';
 
 let userCart = [];
 
@@ -557,5 +573,3 @@ navig.addEventListener('click', async function (e) {
 })
 
 }
-
-renderWebsite();
