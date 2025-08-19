@@ -503,7 +503,7 @@ class Jewelery {
 const jew = new Jewelery ();
 
 navig.addEventListener('click', async function (e) {
-    await wait(1000);
+    await wait(200);
     if (selected_text.textContent == "men's clothing" && !isManActive) {
         console.log("men's clothing");
         menClothing.renderMenClothing();

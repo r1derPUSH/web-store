@@ -6,7 +6,7 @@ const womenC = document.querySelector('.womenC');
 const electronics = document.querySelector('.electronics');
 const jewelery = document.querySelector('.jewelery');
 const btnBack = document.querySelector('.backToShop');
-
+const totalPrice = document.querySelector('.totalPrice');
 
 btnBack.addEventListener('click', function () {
     window.location.href = '../main/index.html';
@@ -36,6 +36,9 @@ console.log(arrOfJewelery);
 //constants for logic
 // const lengthOfMan1 
 
+
+// total price counter
+let total = 0;
 
 
 const manSectionLength = JSON.parse(localStorage.getItem('idOfMenClothing'));
@@ -89,6 +92,7 @@ class CartOfManClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfMenClothing[manSectionLength[i] - 1].price + "$";
+                total += arrOfMenClothing[manSectionLength[i] - 1].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -141,6 +145,7 @@ class CartOfManClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfMenClothing[manSectionLength[i] - 1].price + "$";
+                total += arrOfMenClothing[manSectionLength[i] - 1].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -193,6 +198,7 @@ class CartOfManClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfMenClothing[manSectionLength[i] - 1].price + "$";
+                total += arrOfMenClothing[manSectionLength[i] - 1].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -245,6 +251,7 @@ class CartOfManClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfMenClothing[manSectionLength[i] - 1].price + "$";
+                total += arrOfMenClothing[manSectionLength[i] - 1].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -323,6 +330,7 @@ class CartOfWomanClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
+                total += arrOfWomenClothing[womanSectionLength[i] - 15].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -375,6 +383,7 @@ class CartOfWomanClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
+                total += arrOfWomenClothing[womanSectionLength[i] - 15].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -427,6 +436,7 @@ class CartOfWomanClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
+                total += arrOfWomenClothing[womanSectionLength[i] - 15].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -479,6 +489,7 @@ class CartOfWomanClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
+                total += arrOfWomenClothing[womanSectionLength[i] - 15].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -543,6 +554,7 @@ class CartOfElectronics {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
+                total += arrOfElectronics[electronicsSectionLength[i] - 9].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -595,6 +607,7 @@ class CartOfElectronics {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
+                total += arrOfElectronics[electronicsSectionLength[i] - 9].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -647,6 +660,7 @@ class CartOfElectronics {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
+                total += arrOfElectronics[electronicsSectionLength[i] - 9].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -699,6 +713,7 @@ class CartOfElectronics {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
+                total += arrOfElectronics[electronicsSectionLength[i] - 9].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -763,6 +778,7 @@ class CartOfJewelery {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
+                total += arrOfJewelery[jewelerySectionLength[i] - 5].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -815,6 +831,7 @@ class CartOfJewelery {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
+                total += arrOfJewelery[jewelerySectionLength[i] - 5].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -867,6 +884,7 @@ class CartOfJewelery {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
+                total += arrOfJewelery[jewelerySectionLength[i] - 5].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -919,6 +937,7 @@ class CartOfJewelery {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
+                total += arrOfJewelery[jewelerySectionLength[i] - 5].price;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -943,6 +962,14 @@ class CartOfJewelery {
     }
 }
 
+class TotalPrice {
+    renderTotalPrice () {
+        totalPrice.textContent = `Total: ${total}$`;
+        totalPrice.style.fontSize = '1.3rem';
+    }
+}
+
+
 // render class components
 // man
 if (manSectionLength !== null) {
@@ -964,7 +991,9 @@ if (jewelerySectionLength !== null) {
     const createJewProps = new CartOfJewelery();
     createJewProps.renderJewelerySection();
 }
-
+// price
+const createTotalPrice = new TotalPrice();
+createTotalPrice.renderTotalPrice();
 }
 
 renderWebsite();
