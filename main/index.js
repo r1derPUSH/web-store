@@ -40,6 +40,7 @@ function getUserInfo() {
         localStorage.setItem('email', email.value);
         localStorage.setItem('password', password.value);
         loginDiv.style.display = 'none';
+        
     }
     else {
         const user = localStorage.getItem('username');
