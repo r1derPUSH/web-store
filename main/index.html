@@ -5,76 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>web-store</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="img/png" href="./img/logo.png">
+    <link rel="icon" type="image/png" href="img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
  
     <!--Login form-->
-        <div class="flexLogin">
+    <div class="flexLogin">
         <div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
+            <input type="checkbox" id="chk" aria-hidden="true">
 
-			<div class="signup">
-				<form onsubmit="event.preventDefault()">
-					<label class="sign-up-text" for="chk" aria-hidden="true">Sign up</label>
-					<input class="username" minlength="3" maxlength="20" type="text" pattern="[A-Za-z0-9]+" title="Only English letters and numbers" name="txt" placeholder="User name" required="">
-					<input class="email" type="email" name="email" placeholder="Email" required="">
-					<input class="password" minlength="4" maxlength="20" type="password" pattern="[A-Za-z0-9]+" title="Only English letters and numbers" name="pswd" placeholder="Password" required="">
-					<button class="sign-up-btn" onclick="getUserInfo()">Sign up</button>
-				</form>
-			</div>
+            <div class="signup">
+                <form onsubmit="event.preventDefault()">
+                    <label class="sign-up-text" for="chk" aria-hidden="true">Sign up</label>
+                    <input class="username" minlength="3" maxlength="20" type="text" pattern="[A-Za-z0-9]+" title="Only English letters and numbers" name="txt" placeholder="User name" required="">
+                    <input class="email" type="email" name="email" placeholder="Email" required="">
+                    <input class="password" minlength="4" maxlength="20" type="password" pattern="[A-Za-z0-9]+" title="Only English letters and numbers" name="pswd" placeholder="Password" required="">
+                    <button class="sign-up-btn" onclick="getUserInfo()">Sign up</button>
+                </form>
+            </div>
 
-			<div class="login">
-				<form onsubmit="event.preventDefault()">
-					<label for="chk" aria-hidden="true"><p class="login-text">Login</p></label>
-					<input class="login-email" type="email" name="email" placeholder="Email" >
-					<input class="login-password" type="password" name="pswd" placeholder="Password" >
-					<button class="log-in-button" onclick="getUserLoginInfo()">Login</button>
-				</form>
-			</div>
-	    </div>
+            <div class="login">
+                <form onsubmit="event.preventDefault()">
+                    <label for="chk" aria-hidden="true"><p class="login-text">Login</p></label>
+                    <input class="login-email" type="email" name="email" placeholder="Email">
+                    <input class="login-password" type="password" name="pswd" placeholder="Password">
+                    <button class="log-in-button" onclick="getUserLoginInfo()">Login</button>
+                </form>
+            </div>
+        </div>
     </div>
     <!--End of login form-->
+
     <!--Header-->
     <header class="header">
         <div class="header-container">
             <p class="storeText">Store</p>
-            <a class="storeCart" href="./cart/cart.html" target="_blank"><img src="img/icons8-cart-48.png" alt=""></a>
+            <a class="storeCart" href="../cart/cart.html" target="_blank"><img src="img/icons8-cart-48.png" alt="cart"></a>
             <div class="username-img">
-                <img src="https://picsum.photos/200/200" class="userImg">
+                <img src="https://picsum.photos/200/200" class="userImg" alt="user">
                 <div class="flexSpan">
-                    <span class="userName">
-                    
-                    </span>
+                    <span class="userName"></span>
                 </div>
             </div>
         </div>
     </header>
+
     <!--Main-->
     <main class="mainS">
         <!--Animated & Styled "Select-Menu"-->
         <div class="flexBoxForAnimation">
-        <div class="box">
+            <div class="box">
+                <div class="selected_option">
+                    <p class="selected-text">Select Option</p>
+                    <div class="arrow"></div>
+                </div>
 
-            <div class="selected_option">
-                <p class="selected-text">Select Option</p>
-                <div class="arrow"></div>
+                <div class="option_box">
+                    <nav class="nav">
+                        <ul>
+                            <li>men's clothing</li>
+                            <li>jewelery</li>
+                            <li>electronics</li>
+                            <li>women's clothing</li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
-            <div class="option_box">
-                <nav class="nav">
-                    <ul>
-                        <li>men's clothing</li>
-                        <li>jewelery</li>
-                        <li>electronics</li>
-                        <li>women's clothing</li>
-                    </ul>
-                </nav>
-            </div>
-            </div>
             <div class="animatedCart">
-                <img src="./main/img/logo.png" class="imgAnimatedCart">
+                <img src="img/logo.png" class="imgAnimatedCart" alt="logo">
             </div>
         </div>
         
@@ -87,7 +87,6 @@
             </div>
         </div>
     </main>
-
     <script src="./index.js"></script>
 </body>
 </html>

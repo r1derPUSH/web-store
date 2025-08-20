@@ -67,3 +67,28 @@ body {
   -webkit-line-clamp: 3; /* кількість рядків */
   -webkit-box-orient: vertical;
 }
+
+/* remove-btn */
+
+.remove-btn {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.remove-btn:hover {
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  transform: translateY(-2px);
+}
+
+.remove-btn:active {
+  transform: scale(0.95);
+}

@@ -132,6 +132,11 @@ class CartOfManClothing {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId1 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (manSectionLength[i] == 2 && !isId2) {
                 const quantity = document.createElement('p');
@@ -185,6 +190,11 @@ class CartOfManClothing {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId2 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (manSectionLength[i] == 3 && !isId3) {
                 const quantity = document.createElement('p');
@@ -238,6 +248,11 @@ class CartOfManClothing {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId3 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (manSectionLength[i] == 4 && !isId4) {
                 const quantity = document.createElement('p');
@@ -291,6 +306,11 @@ class CartOfManClothing {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId4 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
     }
     } //////
@@ -370,6 +390,11 @@ class CartOfWomanClothing {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId5 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (womanSectionLength[i] == 16 && !isId6) {
                 const quantity = document.createElement('p');
@@ -423,6 +448,11 @@ class CartOfWomanClothing {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId6 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (womanSectionLength[i] == 17 && !isId7) {
                 const quantity = document.createElement('p');
@@ -476,6 +506,11 @@ class CartOfWomanClothing {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId7 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (womanSectionLength[i] == 18 && !isId8) {
                 const quantity = document.createElement('p');
@@ -529,6 +564,11 @@ class CartOfWomanClothing {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId8 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
     }
     }
@@ -594,6 +634,11 @@ class CartOfElectronics {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId9 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (electronicsSectionLength[i] == 10 && !isId10) {
                 const quantity = document.createElement('p');
@@ -647,6 +692,11 @@ class CartOfElectronics {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId10 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (electronicsSectionLength[i] == 11 && !isId11) {
                 const quantity = document.createElement('p');
@@ -700,6 +750,11 @@ class CartOfElectronics {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId11 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (electronicsSectionLength[i] == 12 && !isId12) {
                 const quantity = document.createElement('p');
@@ -753,6 +808,11 @@ class CartOfElectronics {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId12 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
     }
     }
@@ -818,6 +878,11 @@ class CartOfJewelery {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId13 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (jewelerySectionLength[i] == 6 && !isId14) {
                 const quantity = document.createElement('p');
@@ -871,6 +936,11 @@ class CartOfJewelery {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId14 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (jewelerySectionLength[i] == 7 && !isId15) {
                 const quantity = document.createElement('p');
@@ -924,6 +994,11 @@ class CartOfJewelery {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId15 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
         }
         if (jewelerySectionLength[i] == 8 && !isId16) {
                 const quantity = document.createElement('p');
@@ -977,6 +1052,15 @@ class CartOfJewelery {
                 quantity.style.fontSize = '1.3rem';
                 quantity.style.fontWeight = 'bold';
                 isId16 = true;
+                // remove-btn
+                const btn = document.createElement('button');
+                container.appendChild(btn);
+                btn.textContent = 'Remove';
+                btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                    localStorage.removeItem('')
+                    window.href = window.href;
+                }
         }
     }
     }
