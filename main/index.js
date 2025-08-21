@@ -87,7 +87,6 @@ function getUserLoginInfo () {
     }
     if (localStorage.getItem('username') !== null && localStorage.getItem('email') !== null && localStorage.getItem('password') !== null) {
         if (localStorage.getItem('email') == loginEmail.value && localStorage.getItem('password') == loginPassword.value) {
-            // alert('you logged in!');
             localStorage.setItem('isLoggedIn', true);
             renderWebsite();
         } 
@@ -96,7 +95,6 @@ function getUserLoginInfo () {
             loginText.textContent = `Dear ${user}, you entered wrong password or email 😣`;
             loginText.style.color = 'red';
             loginText.style.marginLeft = '3vh';
-            // loginText.stye.marginTop = '10vh';
         }
     }
 }
@@ -170,12 +168,6 @@ const arrOfMenClothing = data.filter(item => item.category == "men's clothing");
 const arrOfWomenClothing = data.filter(item => item.category == "women's clothing");
 const arrOfElectronics = data.filter(item => item.category == "electronics");
 const arrOfJewelery = data.filter(item => item.category == "jewelery");
-// console.log(arrOfMenClothing);
-// console.log(arrOfWomenClothing);
-// console.log(arrOfElectronics);
-// console.log(arrOfJewelery);
-
-
 
 function addUserCartInfo(id) {
     userCart.push(id);
@@ -185,13 +177,6 @@ function addUserCartInfo(id) {
 // Products
 
 class MenClothing {
-    constructor (name, img, desc, price, inStock) {
-        this.name = name;
-        this.img = img;
-        this.desc = desc;
-        this.price = price;
-        this.inStock = inStock;
-    }
     renderMenClothing () {
         isManActive = true;
         womenC.style.display = 'none';
@@ -289,9 +274,6 @@ class MenClothing {
 const menClothing = new MenClothing ();
 
 class WomenClothing {
-    constructor (data) {
-
-    }
     renderWomenClothing () {
         isWomenActive = true;
         menC.style.display = 'none';
@@ -388,10 +370,6 @@ class WomenClothing {
 const womenClothing = new WomenClothing();
 
 class Electronics {
-    constructor (data) {
-
-    }
-
     renderElectronics () {
         isElectronicsActive = true;
         menC.style.display = 'none';
@@ -489,9 +467,6 @@ const elec = new Electronics ();
 
 
 class Jewelery {
-    constructor (data) {
-
-    }
     renderJewelery () {
         isJeweleryActive = true;
         menC.style.display = 'none';
