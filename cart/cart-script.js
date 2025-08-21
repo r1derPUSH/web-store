@@ -1,5 +1,5 @@
 async function renderWebsite () {
-
+    
 // DOM manipulation
 const menC = document.querySelector('.menC');
 const womenC = document.querySelector('.womenC');
@@ -68,7 +68,6 @@ const jewelerySectionLength = JSON.parse(localStorage.getItem('idOfJewelery'));
 console.log(jewelerySectionLength);
 
 class CartOfManClothing {
-   // ДОДУМАТИ ЛОГІКУ З КІЛЬКІСТЮ ПРОДУКТІВ
     renderManCartSection () {
         let isId1 = false;
         let isId2 = false;
@@ -140,10 +139,6 @@ class CartOfManClothing {
         }
         if (manSectionLength[i] == 2 && !isId2) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -198,10 +193,6 @@ class CartOfManClothing {
         }
         if (manSectionLength[i] == 3 && !isId3) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -256,10 +247,6 @@ class CartOfManClothing {
         }
         if (manSectionLength[i] == 4 && !isId4) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -340,10 +327,6 @@ class CartOfWomanClothing {
         for (let i = 0; i < womanSectionLength.length; i++) {
             if (womanSectionLength[i] == 15 && !isId5) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -398,10 +381,6 @@ class CartOfWomanClothing {
         }
         if (womanSectionLength[i] == 16 && !isId6) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -456,10 +435,6 @@ class CartOfWomanClothing {
         }
         if (womanSectionLength[i] == 17 && !isId7) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -514,10 +489,6 @@ class CartOfWomanClothing {
         }
         if (womanSectionLength[i] == 18 && !isId8) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -584,10 +555,6 @@ class CartOfElectronics {
         for (let i = 0; i < electronicsSectionLength.length; i++) {
             if (electronicsSectionLength[i] == 9 && !isId9) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -642,10 +609,6 @@ class CartOfElectronics {
         }
         if (electronicsSectionLength[i] == 10 && !isId10) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -700,10 +663,6 @@ class CartOfElectronics {
         }
         if (electronicsSectionLength[i] == 11 && !isId11) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -758,10 +717,6 @@ class CartOfElectronics {
         }
         if (electronicsSectionLength[i] == 12 && !isId12) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -828,10 +783,6 @@ class CartOfJewelery {
         for (let i = 0; i < jewelerySectionLength.length; i++) {
             if (jewelerySectionLength[i] == 5 && !isId13) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -886,10 +837,6 @@ class CartOfJewelery {
         }
         if (jewelerySectionLength[i] == 6 && !isId14) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -944,10 +891,6 @@ class CartOfJewelery {
         }
         if (jewelerySectionLength[i] == 7 && !isId15) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
@@ -1002,10 +945,6 @@ class CartOfJewelery {
         }
         if (jewelerySectionLength[i] == 8 && !isId16) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
