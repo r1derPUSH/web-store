@@ -1026,7 +1026,7 @@ class CartOfJewelery {
                 const img = document.createElement('img');
                 container.appendChild(img);
                 img.src = arrOfJewelery[jewelerySectionLength[i] - 5].image;
-                img.style.width = '8vh';
+                img.style.width = '8vh'; 
                 img.style.height = '8vh';
                 // price
                 const price = document.createElement('p');

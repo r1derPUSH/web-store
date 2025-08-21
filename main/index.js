@@ -50,7 +50,15 @@ if (isLoggedIn) {
     renderWebsite();
 }
 
+function checkEmail (email) {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(email);
+}
+
 function getUserInfo() {
+    if (!checkEmail(email.value)) {
+        return;
+    }
     if (email.value != '' && password.value != '' && username !='' && localStorage.getItem('username') === null && localStorage.getItem('email') === null && localStorage.getItem('password') === null) {
         localStorage.setItem('username', username.value);
         localStorage.setItem('email', email.value);
@@ -74,6 +82,9 @@ function getUserInfo() {
 }
 
 function getUserLoginInfo () {
+    if (!checkEmail(email.value)) {
+        return;
+    }
     if (localStorage.getItem('username') !== null && localStorage.getItem('email') !== null && localStorage.getItem('password') !== null) {
         if (localStorage.getItem('email') == loginEmail.value && localStorage.getItem('password') == loginPassword.value) {
             // alert('you logged in!');
