@@ -1068,7 +1068,7 @@ class CartOfJewelery {
 
 class TotalPrice {
     renderTotalPrice () {
-        totalPrice.textContent = `Total: ${total}$`;
+        totalPrice.textContent = `Total: ${total.toFixed(2)}$`;
         totalPrice.style.fontSize = '1.3rem';
     }
 }
