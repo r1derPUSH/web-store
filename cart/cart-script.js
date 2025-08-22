@@ -662,6 +662,13 @@ class CartOfElectronics {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const filteredArr = arr.filter(item => item != 9);
+                    electronicsSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnElectronicsId1');
+                    window.location.href = window.location.href;   
+                }
         }
         if (electronicsSectionLength[i] == 10 && !isId10) {
                 const quantity = document.createElement('p');
@@ -716,6 +723,13 @@ class CartOfElectronics {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const filteredArr = arr.filter(item => item != 10);
+                    electronicsSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnElectronicsId2');
+                    window.location.href = window.location.href;   
+                }
         }
         if (electronicsSectionLength[i] == 11 && !isId11) {
                 const quantity = document.createElement('p');
@@ -770,6 +784,13 @@ class CartOfElectronics {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const filteredArr = arr.filter(item => item != 11);
+                    electronicsSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnElectronicsId3');
+                    window.location.href = window.location.href;   
+                }
         }
         if (electronicsSectionLength[i] == 12 && !isId12) {
                 const quantity = document.createElement('p');
@@ -824,6 +845,13 @@ class CartOfElectronics {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const filteredArr = arr.filter(item => item != 12);
+                    electronicsSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnElectronicsId4');
+                    window.location.href = window.location.href;   
+                }
         }
     }
     }
@@ -890,6 +918,13 @@ class CartOfJewelery {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfJewelery'));
+                    const filteredArr = arr.filter(item => item != 5);
+                    jewelerySectionLength = localStorage.setItem('idOfJewelery', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnJeweleryId1');
+                    window.location.href = window.location.href;   
+                }
         }
         if (jewelerySectionLength[i] == 6 && !isId14) {
                 const quantity = document.createElement('p');
@@ -944,6 +979,13 @@ class CartOfJewelery {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfJewelery'));
+                    const filteredArr = arr.filter(item => item != 6);
+                    jewelerySectionLength = localStorage.setItem('idOfJewelery', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnJeweleryId2');
+                    window.location.href = window.location.href;   
+                }
         }
         if (jewelerySectionLength[i] == 7 && !isId15) {
                 const quantity = document.createElement('p');
@@ -998,6 +1040,13 @@ class CartOfJewelery {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfJewelery'));
+                    const filteredArr = arr.filter(item => item != 7);
+                    jewelerySectionLength = localStorage.setItem('idOfJewelery', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnJeweleryId3');
+                    window.location.href = window.location.href;   
+                }
         }
         if (jewelerySectionLength[i] == 8 && !isId16) {
                 const quantity = document.createElement('p');
@@ -1053,8 +1102,11 @@ class CartOfJewelery {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                    localStorage.removeItem('')
-                    window.href = window.href;
+                const arr = JSON.parse(localStorage.getItem('idOfJewelery'));
+                    const filteredArr = arr.filter(item => item != 8);
+                    jewelerySectionLength = localStorage.setItem('idOfJewelery', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnJeweleryId4');
+                    window.location.href = window.location.href;   
                 }
         }
     }
