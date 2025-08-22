@@ -139,7 +139,8 @@ class CartOfManClothing {
                 btn.onclick = function () {
                 const arr = JSON.parse(localStorage.getItem('idOfMenClothing'));
                     const filteredArr = arr.filter(item => item != 1);
-                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));    
+                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));  
+                    localStorage.removeItem('clicksOnMenId1');  
                     window.location.href = window.location.href; 
                 }
         }
@@ -199,7 +200,8 @@ class CartOfManClothing {
                 btn.onclick = function () {
                 const arr = JSON.parse(localStorage.getItem('idOfMenClothing'));
                     const filteredArr = arr.filter(item => item != 2);
-                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));    
+                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));   
+                    localStorage.removeItem('clicksOnMenId2');  
                     window.location.href = window.location.href; 
                 }
         }
@@ -259,7 +261,8 @@ class CartOfManClothing {
                 btn.onclick = function () {
                 const arr = JSON.parse(localStorage.getItem('idOfMenClothing'));
                     const filteredArr = arr.filter(item => item != 3);
-                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));    
+                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));   
+                    localStorage.removeItem('clicksOnMenId3');  
                     window.location.href = window.location.href; 
                 }
         }
@@ -320,6 +323,7 @@ class CartOfManClothing {
                 const arr = JSON.parse(localStorage.getItem('idOfMenClothing'));
                     const filteredArr = arr.filter(item => item != 4);
                     manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));  
+                    localStorage.removeItem('clicksOnMenId4'); 
                     window.location.href = window.location.href;   
                 }
         }
@@ -406,6 +410,7 @@ class CartOfWomanClothing {
                 const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
                     const filteredArr = arr.filter(item => item != 15);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));    
+                    localStorage.removeItem('clicksOnWomanId1');
                     window.location.href = window.location.href; 
                 }
         }
@@ -466,6 +471,7 @@ class CartOfWomanClothing {
                 const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
                     const filteredArr = arr.filter(item => item != 16);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));    
+                    localStorage.removeItem('clicksOnWomanId2');
                     window.location.href = window.location.href; 
                 }
         }
@@ -526,6 +532,7 @@ class CartOfWomanClothing {
                 const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
                     const filteredArr = arr.filter(item => item != 17);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
+                    localStorage.removeItem('clicksOnWomanId3');
                     window.location.href = window.location.href;   
                 }
         }
@@ -586,6 +593,7 @@ class CartOfWomanClothing {
                 const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
                     const filteredArr = arr.filter(item => item != 18);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr)); 
+                    localStorage.removeItem('clicksOnWomanId4');
                     window.location.href = window.location.href;   
                 }
         }
