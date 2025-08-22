@@ -61,10 +61,10 @@ console.log(arrOfJewelery);
 let total = 0;
 
 
-const manSectionLength = JSON.parse(localStorage.getItem('idOfMenClothing'));
-const womanSectionLength = JSON.parse(localStorage.getItem('idOfWomenClothing'));
-const electronicsSectionLength = JSON.parse(localStorage.getItem('idOfElectronics'));
-const jewelerySectionLength = JSON.parse(localStorage.getItem('idOfJewelery'));
+let manSectionLength = JSON.parse(localStorage.getItem('idOfMenClothing'));
+let womanSectionLength = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+let electronicsSectionLength = JSON.parse(localStorage.getItem('idOfElectronics'));
+let jewelerySectionLength = JSON.parse(localStorage.getItem('idOfJewelery'));
 console.log(jewelerySectionLength);
 
 class CartOfManClothing {
@@ -136,6 +136,11 @@ class CartOfManClothing {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfMenClothing'));
+                    const filteredArr = arr.filter(item => item != 1);
+                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));    
+                }
         }
         if (manSectionLength[i] == 2 && !isId2) {
                 const quantity = document.createElement('p');
@@ -190,6 +195,11 @@ class CartOfManClothing {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfMenClothing'));
+                    const filteredArr = arr.filter(item => item != 2);
+                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));    
+                }
         }
         if (manSectionLength[i] == 3 && !isId3) {
                 const quantity = document.createElement('p');
@@ -244,6 +254,11 @@ class CartOfManClothing {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfMenClothing'));
+                    const filteredArr = arr.filter(item => item != 3);
+                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));    
+                }
         }
         if (manSectionLength[i] == 4 && !isId4) {
                 const quantity = document.createElement('p');
@@ -298,6 +313,11 @@ class CartOfManClothing {
                 container.appendChild(btn);
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
+                btn.onclick = function () {
+                const arr = JSON.parse(localStorage.getItem('idOfMenClothing'));
+                    const filteredArr = arr.filter(item => item != 4);
+                    manSectionLength = localStorage.setItem('idOfMenClothing', JSON.stringify(filteredArr));    
+                }
         }
     }
     } //////
