@@ -9,49 +9,112 @@ body {
   overflow-x: hidden;
 }
 
+/* --- Cart Section Header --- */
 .cart-section {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   color: #ffffff;
-  text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
-  margin-bottom: 15px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  color: #2c3e50; /* темний колір для заливки */
+  -webkit-text-stroke: 1px #ffffff; /* білий контур */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* тінь для об'єму */
 }
 
-.backToShop {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 18px;
+/* --- Buttons --- */
+.backToShop,
+.clearStorage {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 12px 24px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 5px;
-  background: linear-gradient(135deg, #4ca1af, #2c3e50);
+  transition: all 0.4s ease;
+  margin: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* buttons position */
+
+.button-box-holder {
+  display: flex;
+  justify-content: center;
+}
+
+/* Back to Shop Button */
+.backToShop {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
 }
 
 .backToShop:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #5db7c4, #34495e);
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
+/* Clear Cart Button */
 .clearStorage {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 5px;
-  background: linear-gradient(135deg, #f5af19, #f12711);
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
   color: #fff;
 }
 
 .clearStorage:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #ffbd45, #ff4d2b);
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- Flex Container for Cart & Total Price --- */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 25px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* --- Order Button --- */
+.order-btn {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin: 15px;
+  color: #fff;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover Effect */
+.order-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Active / Click Effect */
+.order-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flex h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
 
