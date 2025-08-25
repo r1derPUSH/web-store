@@ -88,6 +88,11 @@ body {
 .storeCart img {
     width: 8vh;
     height: 8vh;
+    transition: all 0.5s ease;
+}
+
+.storeCart img:hover {
+    transform: scale(1.1);
 }
 
 /* cart animation */

@@ -12,6 +12,10 @@ btnBack.addEventListener('click', function () {
     window.location.href = '../main/index.html';
 })
 
+// function orderBtn() {
+//     window.location.href = '../order-btn/orderBtn.html';
+// }
+
 document.querySelector('.clearStorage').addEventListener('click', function () {
     localStorage.removeItem('clicksOnElectronicsId1');
     localStorage.removeItem('clicksOnElectronicsId2');
