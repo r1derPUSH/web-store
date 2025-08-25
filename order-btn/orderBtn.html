@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Placeholder</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .placeholder-container {
+      background: rgba(0,0,0,0.3);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffdd57;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .back-btn {
+      padding: 12px 28px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+    }
+  </style>
+</head>
+<body>
+  <div class="placeholder-container">
+    <h1>Order Button Coming Soon!</h1>
+    <p>This button is not active yet. Ordering functionality is coming soon.</p>
+    <a href="index.html" class="back-btn">Back to Shop</a>
+  </div>
+</body>
+</html>
