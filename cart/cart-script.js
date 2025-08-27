@@ -424,10 +424,13 @@ class CartOfWomanClothing {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+                    const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+                    const arrOfIds = JSON.parse(localStorage.getItem('id'));
                     const filteredArr = arr.filter(item => item != 15);
-                    womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));    
-                    localStorage.removeItem('clicksOnWomanId1');
+                    const filteredArrOfIds = arrOfIds.filter(item => item != 15);
+                    womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
+                    idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
+                    localStorage.removeItem('clicksOnWomenId1');  
                     window.location.href = window.location.href; 
                 }
         }
@@ -485,10 +488,13 @@ class CartOfWomanClothing {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+                    const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+                    const arrOfIds = JSON.parse(localStorage.getItem('id'));
                     const filteredArr = arr.filter(item => item != 16);
-                    womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));    
-                    localStorage.removeItem('clicksOnWomanId2');
+                    const filteredArrOfIds = arrOfIds.filter(item => item != 16);
+                    womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
+                    idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
+                    localStorage.removeItem('clicksOnWomenId2');  
                     window.location.href = window.location.href; 
                 }
         }
@@ -546,11 +552,14 @@ class CartOfWomanClothing {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+                    const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+                    const arrOfIds = JSON.parse(localStorage.getItem('id'));
                     const filteredArr = arr.filter(item => item != 17);
+                    const filteredArrOfIds = arrOfIds.filter(item => item != 17);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
-                    localStorage.removeItem('clicksOnWomanId3');
-                    window.location.href = window.location.href;   
+                    idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
+                    localStorage.removeItem('clicksOnWomenId3');  
+                    window.location.href = window.location.href;    
                 }
         }
         if (womanSectionLength[i] == 18 && !isId8) {
@@ -607,11 +616,14 @@ class CartOfWomanClothing {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+                    const arr = JSON.parse(localStorage.getItem('idOfWomenClothing'));
+                    const arrOfIds = JSON.parse(localStorage.getItem('id'));
                     const filteredArr = arr.filter(item => item != 18);
-                    womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr)); 
-                    localStorage.removeItem('clicksOnWomanId4');
-                    window.location.href = window.location.href;   
+                    const filteredArrOfIds = arrOfIds.filter(item => item != 18);
+                    womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
+                    idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
+                    localStorage.removeItem('clicksOnWomenId4');  
+                    window.location.href = window.location.href; 
                 }
         }
     }
