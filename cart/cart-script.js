@@ -430,7 +430,7 @@ class CartOfWomanClothing {
                     const filteredArrOfIds = arrOfIds.filter(item => item != 15);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
                     idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
-                    localStorage.removeItem('clicksOnWomenId1');  
+                    localStorage.removeItem('clicksOnWomanId1');  
                     window.location.href = window.location.href; 
                 }
         }
@@ -494,7 +494,7 @@ class CartOfWomanClothing {
                     const filteredArrOfIds = arrOfIds.filter(item => item != 16);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
                     idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
-                    localStorage.removeItem('clicksOnWomenId2');  
+                    localStorage.removeItem('clicksOnWomanId2');  
                     window.location.href = window.location.href; 
                 }
         }
@@ -558,7 +558,7 @@ class CartOfWomanClothing {
                     const filteredArrOfIds = arrOfIds.filter(item => item != 17);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
                     idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
-                    localStorage.removeItem('clicksOnWomenId3');  
+                    localStorage.removeItem('clicksOnWomanId3');  
                     window.location.href = window.location.href;    
                 }
         }
@@ -622,7 +622,7 @@ class CartOfWomanClothing {
                     const filteredArrOfIds = arrOfIds.filter(item => item != 18);
                     womanSectionLength = localStorage.setItem('idOfWomenClothing', JSON.stringify(filteredArr));  
                     idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
-                    localStorage.removeItem('clicksOnWomenId4');  
+                    localStorage.removeItem('clicksOnWomanId4');  
                     window.location.href = window.location.href; 
                 }
         }
@@ -692,11 +692,14 @@ class CartOfElectronics {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const arrOfIds = JSON.parse(localStorage.getItem('id'));
                     const filteredArr = arr.filter(item => item != 9);
-                    electronicsSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr)); 
-                    localStorage.removeItem('clicksOnElectronicsId1');
-                    window.location.href = window.location.href;   
+                    const filteredArrOfIds = arrOfIds.filter(item => item != 9);
+                    womanSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr));  
+                    idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
+                    localStorage.removeItem('clicksOnElectronics1');  
+                    window.location.href = window.location.href;  
                 }
         }
         if (electronicsSectionLength[i] == 10 && !isId10) {
