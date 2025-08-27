@@ -18,7 +18,12 @@ const animatedCartImg = document.querySelector('.imgAnimatedCart');
 // text for user
 const userInfoName = document.querySelector('.userName');
 const usernameImg = document.querySelector('.username-img');
+// small section profile
+const userImgSmallSection = document.querySelector('.user-small-section-avatar');
+const userNameSmallSection = document.querySelector('.user-small-section-name');
 const userSmallInfo = document.querySelector('.user-profile');
+const countOfSmallSection = document.querySelector('.count');
+const totalPriceOfSmallSection = document.querySelector('.price');
 // login manipulation
 // register
 const header = document.querySelector('.header');
@@ -41,8 +46,6 @@ const loginText = document.querySelector('.login-text');
 function wait (ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-// alert('fun ');
 
 let isSmallInfoDisplayed = false;
 
@@ -115,6 +118,15 @@ function getUserLoginInfo () {
 }
 
 async function renderWebsite() {
+
+    //username localstorage
+    const user = localStorage.getItem('username');
+
+    // code for small section
+
+    userNameSmallSection.textContent = user;
+
+
         await wait(200);
         loginDiv.style.display = 'none';
         header.style.display = 'block';
@@ -165,7 +177,6 @@ const data = await response.json();
 console.log(data);
 
 // setting userName
-const user = localStorage.getItem('username');
 userInfoName.textContent = user;
 
 
