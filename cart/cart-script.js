@@ -698,7 +698,7 @@ class CartOfElectronics {
                     const filteredArrOfIds = arrOfIds.filter(item => item != 9);
                     womanSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr));  
                     idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
-                    localStorage.removeItem('clicksOnElectronics1');  
+                    localStorage.removeItem('clicksOnElectronicsId1');  
                     window.location.href = window.location.href;  
                 }
         }
@@ -756,11 +756,14 @@ class CartOfElectronics {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const arrOfIds = JSON.parse(localStorage.getItem('id'));
                     const filteredArr = arr.filter(item => item != 10);
-                    electronicsSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr)); 
-                    localStorage.removeItem('clicksOnElectronicsId2');
-                    window.location.href = window.location.href;   
+                    const filteredArrOfIds = arrOfIds.filter(item => item != 10);
+                    womanSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr));  
+                    idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
+                    localStorage.removeItem('clicksOnElectronicsId2');  
+                    window.location.href = window.location.href;  
                 }
         }
         if (electronicsSectionLength[i] == 11 && !isId11) {
@@ -817,11 +820,14 @@ class CartOfElectronics {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const arrOfIds = JSON.parse(localStorage.getItem('id'));
                     const filteredArr = arr.filter(item => item != 11);
-                    electronicsSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr)); 
-                    localStorage.removeItem('clicksOnElectronicsId3');
-                    window.location.href = window.location.href;   
+                    const filteredArrOfIds = arrOfIds.filter(item => item != 11);
+                    womanSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr));  
+                    idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
+                    localStorage.removeItem('clicksOnElectronicsId3');  
+                    window.location.href = window.location.href;  
                 }
         }
         if (electronicsSectionLength[i] == 12 && !isId12) {
@@ -878,11 +884,14 @@ class CartOfElectronics {
                 btn.textContent = 'Remove';
                 btn.classList.add('remove-btn');
                 btn.onclick = function () {
-                const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const arr = JSON.parse(localStorage.getItem('idOfElectronics'));
+                    const arrOfIds = JSON.parse(localStorage.getItem('id'));
                     const filteredArr = arr.filter(item => item != 12);
-                    electronicsSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr)); 
-                    localStorage.removeItem('clicksOnElectronicsId4');
-                    window.location.href = window.location.href;   
+                    const filteredArrOfIds = arrOfIds.filter(item => item != 12);
+                    womanSectionLength = localStorage.setItem('idOfElectronics', JSON.stringify(filteredArr));  
+                    idsOfProducts = localStorage.setItem('id', JSON.stringify(filteredArrOfIds));
+                    localStorage.removeItem('clicksOnElectronicsId4');  
+                    window.location.href = window.location.href;    
                 }
         }
     }
