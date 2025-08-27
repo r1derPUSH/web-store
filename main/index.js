@@ -17,6 +17,8 @@ const animatedCart = document.querySelector('.animatedCart');
 const animatedCartImg = document.querySelector('.imgAnimatedCart');
 // text for user
 const userInfoName = document.querySelector('.userName');
+const usernameImg = document.querySelector('.username-img');
+const userSmallInfo = document.querySelector('.user-profile');
 // login manipulation
 // register
 const header = document.querySelector('.header');
@@ -42,6 +44,8 @@ function wait (ms) {
 
 // alert('fun ');
 
+let isSmallInfoDisplayed = false;
+
 let isLoggedIn = localStorage.getItem('isLoggedIn');
 console.log(isLoggedIn);
 
@@ -53,6 +57,17 @@ if (isLoggedIn) {
 function checkEmail (email) {
     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return re.test(email);
+}
+
+function smallInformation () {
+    if (!isSmallInfoDisplayed) {
+        userSmallInfo.style.display = 'flex';
+        isSmallInfoDisplayed = true;
+    }
+    else {
+        userSmallInfo.style.display = 'none';
+        isSmallInfoDisplayed = false;
+    }
 }
 
 function getUserInfo() {

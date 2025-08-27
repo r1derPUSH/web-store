@@ -41,7 +41,7 @@
         <div class="header-container">
             <p class="storeText">Store</p>
             <a class="storeCart" href="../cart/cart.html" target="_blank"><img src="img/icons8-cart-48.png" alt="cart"></a>
-            <div class="username-img">
+            <div onclick="smallInformation()" class="username-img">
                 <img src="https://picsum.photos/200/200" class="userImg" alt="user">
                 <div class="flexSpan">
                     <span class="userName"></span>
@@ -75,8 +75,20 @@
             <div class="animatedCart">
                 <img src="img/logo.png" class="imgAnimatedCart" alt="logo">
             </div>
+            <!--Small info container-->
+            <div class="user-profile">
+                <div class="profile-header">
+                    <img src="https://via.placeholder.com/40" alt="avatar" class="user-small-section-avatar">
+                    <span class="username">User123</span>
+                </div>
+                <div class="profile-info">
+                    <p>Кількість товарів: <span class="count">3</span></p>
+                    <p>Загальна ціна: <span class="price">$120</span></p>
+                </div>
+            </div>
         </div>
         
+
         <div class="products-container">
             <div class="product-box">
                 <div class="menC"></div>
@@ -106,7 +118,7 @@
     <div class="footer-section">
       <h3>Information</h3>
       <ul>
-        <li><a target="_blank" href="../Rules/rules.html">Rules</a></li>
+        <li class="firstListChild"><a target="_blank" href="../Rules/rules.html">Rules</a></li>
         <li><a target="_blank" href="../Rules/rules.html">Terms of Use</a></li>
       </ul>
     </div>
