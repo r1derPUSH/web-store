@@ -63,6 +63,7 @@ console.log(arrOfJewelery);
 
 // total price counter
 let total = 0;
+localStorage.setItem('totalPrice', total);
 
 
 let idsOfProducts = JSON.parse(localStorage.getItem('id'));

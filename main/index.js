@@ -73,6 +73,7 @@ function smallInformation () {
     }
 }
 
+
 function getUserInfo() {
     if (!checkEmail(email.value)) {
         return;
@@ -98,6 +99,8 @@ function getUserInfo() {
         // alert('you have been already registered');
     }
 }
+
+totalPriceOfSmallSection.textContent = localStorage.getItem('email');
 
 function getUserLoginInfo () {
     if (!checkEmail(email.value)) {
@@ -290,7 +293,14 @@ class MenClothing {
                     counterBtn4++;
                     localStorage.setItem('clicksOnMenId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnMenId4')) || []), counterBtn4]));
                 }
-                }
+                //count of products in small section under username
+                const lengthOfProducts = JSON.parse(localStorage.getItem('id'));
+                countOfSmallSection.textContent = lengthOfProducts.length;
+
+                //email under username
+                const email = localStorage.getItem('email');
+                totalPriceOfSmallSection.textContent = email;
+            }
             // checking
             isManCreated = true;
         }
@@ -387,6 +397,13 @@ class WomenClothing {
                     counterBtn8++;
                     localStorage.setItem('clicksOnWomanId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnWomanId4')) || []), counterBtn8]));
                 }
+                //count of products in small section under username
+                const lengthOfProducts = JSON.parse(localStorage.getItem('id'));
+                countOfSmallSection.textContent = lengthOfProducts.length;
+
+                //email under username
+                const email = localStorage.getItem('email');
+                totalPriceOfSmallSection.textContent = email;
             }
             isWomenCreated = true;
     }
@@ -483,6 +500,13 @@ class Electronics {
                     counterBtn12++;
                     localStorage.setItem('clicksOnElectronicsId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnElectronicsId4')) || []), counterBtn12]));
                 }
+                //count of products in small section under username
+                const lengthOfProducts = JSON.parse(localStorage.getItem('id'));
+                countOfSmallSection.textContent = lengthOfProducts.length;
+
+                //email under username
+                const email = localStorage.getItem('email');
+                totalPriceOfSmallSection.textContent = email;
             }
             isElectronicCreated = true;
     }
@@ -580,6 +604,13 @@ class Jewelery {
                     counterBtn16++;
                     localStorage.setItem('clicksOnJeweleryId4', JSON.stringify([...(JSON.parse(localStorage.getItem('clicksOnJeweleryId4')) || []), counterBtn16]));
                 }
+                //count of products in small section under username
+                const lengthOfProducts = JSON.parse(localStorage.getItem('id'));
+                countOfSmallSection.textContent = lengthOfProducts.length;
+
+                //email under username
+                const email = localStorage.getItem('email');
+                totalPriceOfSmallSection.textContent = email;
             }
             isJeweleryCreated = true;
     }
@@ -608,4 +639,5 @@ navig.addEventListener('click', async function (e) {
     }
 })
 
+    // function
 }
