@@ -87,10 +87,6 @@ class CartOfManClothing {
         for (let i = 0; i < manSectionLength.length; i++) {
             if (manSectionLength[i] == 1 && !isId1) {
                 const quantity = document.createElement('p');
-                // console.log(arrOfMenClothing[manSectionLength[i] - 1])  ;
-                //МОЖНА ПОПРОБУВАТИ ЗАФІЛЬТРИТИ МАСИВ І ДІСТАТИ ДОВЖИНУ ОДНАКОВИХ АЙДІШОК, І ПРОСТО ПИСАТИ КВАНТІТІ
-                // - ЇХ ДОВЖИНА, І ЗРОБИТИ 4 ЗМІННІ, І ПЕРЕВІРКУ СПОЧАТКУ, ЯКЩО ТАМ ДОВЖИНА БІЛЬШЕ ЗА 1 ТОГО ФІЛЬТР
-                //МАСИВУ ТОДІ ПРОСТО ПИСАТИ КВАНТІТІ - МАСИВ.LENGTH;
                 const container = document.createElement('div');
                 menC.appendChild(container);
                 container.style.display = 'flex';
