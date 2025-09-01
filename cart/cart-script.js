@@ -113,7 +113,8 @@ class CartOfManClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfMenClothing[manSectionLength[i] - 1].price + "$";
-                total += arrOfMenClothing[manSectionLength[i] - 1].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnMenId1')) || 0;
+                total += (arrOfMenClothing[manSectionLength[i] - 1].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -177,7 +178,8 @@ class CartOfManClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfMenClothing[manSectionLength[i] - 1].price + "$";
-                total += arrOfMenClothing[manSectionLength[i] - 1].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnMenId2'))  || 0;
+                total += (arrOfMenClothing[manSectionLength[i] - 1].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -241,7 +243,8 @@ class CartOfManClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfMenClothing[manSectionLength[i] - 1].price + "$";
-                total += arrOfMenClothing[manSectionLength[i] - 1].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnMenId3'))  || 0;
+                total += (arrOfMenClothing[manSectionLength[i] - 1].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -305,7 +308,8 @@ class CartOfManClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfMenClothing[manSectionLength[i] - 1].price + "$";
-                total += arrOfMenClothing[manSectionLength[i] - 1].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnMenId4'))  || 0;
+                total += (arrOfMenClothing[manSectionLength[i] - 1].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -395,7 +399,8 @@ class CartOfWomanClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
-                total += arrOfWomenClothing[womanSectionLength[i] - 15].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnWomanId1')) || 0;
+                total += (arrOfWomenClothing[womanSectionLength[i] - 15].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -459,7 +464,8 @@ class CartOfWomanClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
-                total += arrOfWomenClothing[womanSectionLength[i] - 15].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnWomanId2')) || 0;
+                total += (arrOfWomenClothing[womanSectionLength[i] - 15].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -523,7 +529,8 @@ class CartOfWomanClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
-                total += arrOfWomenClothing[womanSectionLength[i] - 15].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnWomanId3'))  || 0;
+                total += (arrOfWomenClothing[womanSectionLength[i] - 15].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -587,7 +594,8 @@ class CartOfWomanClothing {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfWomenClothing[womanSectionLength[i] - 15].price + "$";
-                total += arrOfWomenClothing[womanSectionLength[i] - 15].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnWomanId4'))  || 0;
+                total += (arrOfWomenClothing[womanSectionLength[i] - 15].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -663,7 +671,8 @@ class CartOfElectronics {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
-                total += arrOfElectronics[electronicsSectionLength[i] - 9].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnElectronicsId1'))  || 0;
+                total += (arrOfElectronics[electronicsSectionLength[i] - 9].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -727,7 +736,8 @@ class CartOfElectronics {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
-                total += arrOfElectronics[electronicsSectionLength[i] - 9].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnElectronicsId2'))  || 0;
+                total += (arrOfElectronics[electronicsSectionLength[i] - 9].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -791,7 +801,8 @@ class CartOfElectronics {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
-                total += arrOfElectronics[electronicsSectionLength[i] - 9].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnElectronicsId3'))  || 0;
+                total += (arrOfElectronics[electronicsSectionLength[i] - 9].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -855,7 +866,8 @@ class CartOfElectronics {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfElectronics[electronicsSectionLength[i] - 9].price + "$";
-                total += arrOfElectronics[electronicsSectionLength[i] - 9].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnElectronicsId4'))  || 0;
+                total += (arrOfElectronics[electronicsSectionLength[i] - 9].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -931,7 +943,8 @@ class CartOfJewelery {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
-                total += arrOfJewelery[jewelerySectionLength[i] - 5].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnJeweleryId1'))  || 0;
+                total += (arrOfJewelery[jewelerySectionLength[i] - 5].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -992,7 +1005,8 @@ class CartOfJewelery {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
-                total += arrOfJewelery[jewelerySectionLength[i] - 5].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnJeweleryId2'))  || 0;
+                total += (arrOfJewelery[jewelerySectionLength[i] - 5].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -1053,7 +1067,8 @@ class CartOfJewelery {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
-                total += arrOfJewelery[jewelerySectionLength[i] - 5].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnJeweleryId3'))  || 0;
+                total += (arrOfJewelery[jewelerySectionLength[i] - 5].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
@@ -1114,7 +1129,8 @@ class CartOfJewelery {
                 const price = document.createElement('p');
                 container.appendChild(price);
                 price.textContent = arrOfJewelery[jewelerySectionLength[i] - 5].price + "$";
-                total += arrOfJewelery[jewelerySectionLength[i] - 5].price;
+                const quant = JSON.parse(localStorage.getItem('clicksOnJeweleryId4')) || 0;
+                total += (arrOfJewelery[jewelerySectionLength[i] - 5].price) * quant.length;
                 price.style.fontSize = '1.5rem';
                 price.style.fontWeight = 'bold';
                 //description
